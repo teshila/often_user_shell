@@ -1,0 +1,15 @@
+这需求跑定时作业就行了--批量修改
+
+1.将【禁用】状态下的“国际客服”名下的未过期订单查出来
+select * from class_CourseOrder t1 left join  uc_AdminUser t2 ON t1.ArrangeCrsCS = t2.AUID where t2.Disable=1 and t2.TeamID=4 and DATEADD(HOUR, t1.LessonHour, t1.PaymentTime)>GETDATE()
+
+2.查出勾选“获取离职客服订单”权限的【正常】状态的客服账号
+ SELECT *   FROM uc_AdminUser t left join uc_User_Auths a on a.AUID=t.AUID left join uc_Program b on a.ProgramId=b.pId  where program_code='GetResignationCustotemOrders'   and t.Disable=0    
+
+3.把序号1的分配给序号2
+
+
+4.标识不提醒客服有新单分配到名下
+
+-----------------------------------------------------------------------------------
+分配客服的字段是ArrangeCrsCS，表是uc_AdminUser

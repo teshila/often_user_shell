@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="content">
+  <swiper autoplay="true" indicator-dots="true" indicator-color="#ccc" indicator-active-color="red">
+    <swiper-item>
+      <image class="slide-image" src="./../images/banner/f1.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image class="slide-image" src="./../images/banner/f2.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image class="slide-image" src="./../images/banner/f3.png"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+
+<view class="beginOrder" bindtap="getstart">开启点餐之旅→</view>
+
+
+<include  src="./hot.wxml"></include>
+
+
+

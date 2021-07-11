@@ -1,0 +1,16 @@
+<form bindsubmit="formCompare">
+  <view class="mycontainer">
+<text>输入第一个数字：</text>
+<input type="number" name="num1" />
+</view>
+<view>
+<text>输入第二个数字：</text>
+<input type="number"  name="num2"/>
+</view>
+<view>
+  <button form-type="submit">比较</button>
+</view>
+<view>
+  <text>比较结果：{{result}}</text>
+</view>
+</form>

@@ -1,0 +1,18 @@
+  <view class="bottom-box">
+      <view class="btm-image">
+        <image src="./../images/hot/1.png"></image>
+      </view>
+
+      <view class="btm-image">
+        <image src="./../images/hot/2.png"></image>
+      </view>
+
+
+      <view class="btm-image">
+        <image src="./../images/hot/3.png"></image>
+      </view>
+
+      <view class="btm-image">
+        <image src="./../images/hot/3.png"></image>
+      </view>
+  </view>

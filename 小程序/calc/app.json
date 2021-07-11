@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/mycalc"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#369",
+    "navigationBarTitleText": "数值比较"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/cart/cart",
+    "pages/index/order/order",
+    "pages/index/usercenter"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "胖头鱼点餐",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+
+    "tabBar": {
+      "color": "#ccc",
+      "selectedColor": "#EA2922",
+      "borderStyle": "white",
+      "backgroundColor": "#fff",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "./pages/images/home.png",
+          "selectedIconPath": "./pages/images/home.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/index/cart/cart",
+          "iconPath": "./pages/images/diancan.png",
+          "selectedIconPath": "./pages/images/diancan.png",
+          "text": "点餐"
+        },
+          {
+          "pagePath": "pages/index/order/order",
+          "iconPath": "./pages/images/order.png",
+          "selectedIconPath": "./pages/images/order.png",
+          "text": "订单中心"
+        },
+        {
+          "pagePath": "pages/index/usercenter",
+          "iconPath": "./pages/images/user.png",
+          "selectedIconPath": "./pages/images/user.png",
+          "text": "我的"
+        }
+      ]
+
+    }
+  }  
