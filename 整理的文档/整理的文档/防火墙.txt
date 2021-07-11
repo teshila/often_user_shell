@@ -1,0 +1,36 @@
+
+添加
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+
+firewall-cmd --zone=public --add-port=2888/tcp --permanent
+firewall-cmd --zone=public --add-port=3888/tcp --permanent
+firewall-cmd --zone=public --add-port=9092/tcp --permanent
+
+firewall-cmd --zone=public --add-port=2181/tcp --permanent
+重新载入
+firewall-cmd --reload
+
+
+删除
+
+firewall-cmd --zone=public --remove-port=80/tcp --permanent
+
+查看当前开了哪些端口
+firewall-cmd --list-services
+
+
+查看还有哪些服务可以打开
+firewall-cmd --get-services
+
+
+查看所有打开的端口： 
+firewall-cmd --zone=public --list-ports
+
+ 
+
+更新防火墙规则： 
+firewall-cmd --reload
+
+
+
+https://blog.csdn.net/BiuBiuBiu___/article/details/86167613

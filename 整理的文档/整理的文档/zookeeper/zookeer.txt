@@ -1,0 +1,43 @@
+tar -zxvf zookeeper-3.4.13.tar.gz
+
+
+mv zookeeper-3.4.13  zookeeper
+
+cd zookeeper/conf
+
+cp  zoo_sample.cfg  zoo.cfg
+
+
+vim zoo.cfg
+
+dataDir=/tmp/zookeeper/data
+dataLogDir=/tmp/zookeeper/log
+
+server.1=192.168.180.132:2888:3888
+
+server.2=192.168.180.133:2888:3888
+
+server.3=192.168.180.134:2888:3888
+
+
+mkdir /tmp/zookeeper
+mkdir /tmp/zookeeper/data
+mkdir /tmp/zookeeper/log
+
+
+
+cd /tmp/zookeeper/data
+touch myid
+vim myid
+
+
+export ZOOKEEPER_INSTALL=/usr/local/zookeeper-3.4.13/
+export PATH=$PATH:$ZOOKEEPER_INSTALL/bin
+
+./zkServer.sh start
+./zkServer.sh stop
+
+./zkServer.sh status
+
+
+https://www.cnblogs.com/expiator/p/9853378.html

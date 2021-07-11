@@ -1,0 +1,97 @@
+1、NoSQL数据库(key-value)[并发处理]
+2、分布式缓存服务器
+关系型数据库： 操作是文件
+非关系型数据库: 操作的是内存>数据库容易丢失>数据备份方面下很多功夫
+
+redis4.0.1 安装方式:
+> 官网下载redis最新版
+>tar -xvf redis4.0.1-tar.gz -C /usr/local
+>cd redis4.0.1
+安装依赖
+> yum install -y tcl
+> yum install gcc-c++
+>执行命令：make MALLOC=libc
+>执行测试：make test
+>执行安装 : make PREFIX=/usr/local/redis install
+                  make install PREFIX=/usr/local/redis
+
+开启后端启动：
+>cp /usr/local/redis-4.0.6/redis.conf /opt/soft/redis/bin/ #拷贝redis配置文件到安装目录
+>vi redis.conf
+   #daemonize yes 
+> 后端启动: ./redis-server ./redis.conf
+> pst -ef | grep redis
+
+
+配置链接Redis Desktop Manager
+#redis4的坑★★★★★
+>vi redis.conf
+#bind 127.0.0.1 去掉绑定的IP
+requirepass 连接的密码
+原因： 如果没有设置bind，又没有设置requiredpass属性，redis将开启保护模式仅支持本机访问，所有要不设置bind，要不就设置requirepass   
+
+使用redis启动脚本设置开机自启动
+启动脚本 redis_init_script 位于位于Redis的 /utils/ 目录下，redis_init_script脚本代码如下：
+#!/bin/sh
+# chkconfig:   2345 90 10
+# Simple Redis init.d script conceived to work on Linux systems
+# as it does use of the /proc filesystem.
+ 
+#redis服务器监听的端口
+REDISPORT=6379
+#服务端所处位置
+EXEC=/usr/local/bin/redis-server
+#客户端位置
+CLIEXEC=/usr/local/bin/redis-cli
+#redis的PID文件位置，需要修改
+PIDFILE=/var/run/redis_${REDISPORT}.pid
+ 
+#redis的配置文件位置，需将${REDISPORT}修改为文件名
+CONF="/etc/redis/${REDISPORT}.conf"
+ 
+case "$1" in
+    start)
+        if [ -f $PIDFILE ]
+        then
+                echo "$PIDFILE exists, process is already running or crashed"
+        else
+                echo "Starting Redis server..."
+                $EXEC $CONF
+        fi
+        ;;
+    stop)
+        if [ ! -f $PIDFILE ]
+        then
+                echo "$PIDFILE does not exist, process is not running"
+        else
+                PID=$(cat $PIDFILE)
+                echo "Stopping ..."
+                $CLIEXEC -p $REDISPORT shutdown
+                while [ -x /proc/${PID} ]
+                do
+                    echo "Waiting for Redis to shutdown ..."
+                    sleep 1
+                done
+                echo "Redis stopped"
+        fi
+        ;;
+    *)
+        echo "Please use start or stop as first argument"
+        ;;
+esac
+------------------------------
+mkdir /etc/redis
+cp redis.conf /etc/redis/6379.conf
+------------------------------
+cp redis_init_script /etc/init.d/redis
+#设置为开机自启动服务器
+添加文件执行权限
+chmod +x /etc/rc.d/init.d/redis
+把redis这个脚本添加到开机启动项里面
+chkconfig --add redis
+查看是否添加成功
+chkconfig --list
+#打开服务
+service redis start
+#关闭服务
+service redis stop

@@ -1,0 +1,62 @@
+tar -zxvf kafka_2.13-2.4.0.tgz
+mv kafka_2.13-2.4.0 kafka
+
+
+
+cd /tmp/
+
+mkdir kafka
+
+
+mkdir data
+
+
+cd /usr/local/kafka
+
+cd config
+vim server.properties
+
+
+
+
+ÃÌº”»Áœ¬≈‰÷√£∫
+broker.id=0
+delete.topic.enable=true
+num.network.threads=3
+num.io.threads=8
+socket.send.buffer.bytes=102400
+socket.receive.buffer.bytes=102400
+socket.request.max.bytes=104857600
+log.dirs=/tmp/kafka/data
+num.partitions=1
+num.recovery.threads.per.data.dir=1
+log.retention.hours=168
+zookeeper.connect=zk1:2181,zk2:2181,zk3:2181
+listeners=PLAINTEXT://zk1:9092
+
+
+
+
+vim /etc/profile
+
+
+
+
+export KAFKA_HOME=/usr/local/kafka
+export PATH=$PATH:$KAFKA_HOME/bin
+
+
+source /etc/profile
+
+
+kafka-server-start.sh -daemon ../config/server.properties
+
+
+zkCli.sh
+get /brokers/ids/
+
+https://www.cnblogs.com/xiaohan970121/p/12357199.html
+https://www.cnblogs.com/longBlogs/p/10340251.html
+
+
+https://www.jianshu.com/p/c37469959197

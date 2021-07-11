@@ -1,0 +1,47 @@
+温馨提醒，docker内核版本必须是3.10+以上的版本
+
+查看方式
+
+uname -r
+
+1. 卸载老版本的 docker 及其相关依赖
+
+sudo yum remove docker docker-common container-selinux docker-selinux docker-engine
+
+2，更新yum
+
+yum update
+​ 3. 安装 yum-utils，它提供了 yum-config-manager，可用来管理yum源
+
+sudo yum install -y yum-utils
+​ 4. 添加yum源
+
+sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+​ 5. 更新索引
+
+sudo yum makecache fast
+​ 6. 安装 docker-ce
+
+sudo yum install -y docker-ce
+​ 7. 启动 docker
+
+sudo systemctl start docker
+​ 8. 验证是否安装成功
+
+sudo docker info
+
+https://blog.csdn.net/qq_42969135/article/details/106006977
+docker pull daocloud.io/library/mysql
+
+docker pull rabbitmq:3.7.7-management
+
+
+
+
+https://my.oschina.net/u/4293665/blog/4062244
+docker run -d --name rabbitmq3.7.7 -p 5672:5672 -p 15672:15672  --hostname myRabbit -e RABBITMQ_DEFAULT_VHOST=my_vhost  -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin df80af9ca0c9
+
+
+
+
+ dock ps
