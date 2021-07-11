@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: provider
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+  datasource:
+    url: jdbc:mysql://120.78.225.98:3306/latest?useSSL=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 015310qq
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+
+mybatis:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.ly.provider.pojo
+
+logging:
+  level:
+    com.ly: debug
+    

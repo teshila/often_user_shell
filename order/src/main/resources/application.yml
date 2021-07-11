@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    password: 015310qq
+    username: root
+    url: jdbc:mysql://116.63.169.96:3306/latest2?useSSL=false&useUnicode=true
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+
+mybatis:
+  mapper-locations: classpath*:com/ye/stock/order/mapper/*Mapper.xml
+  type-aliases-package: com.ye.stock.order.pojo
+
+#showSql
+logging:
+  level:
+    com:
+      ye:
+       stock : debug
+
+

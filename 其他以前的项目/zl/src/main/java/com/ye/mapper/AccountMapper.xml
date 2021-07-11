@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 为这个mapper指定一个唯一的namespace，namespace的值习惯上设置成包名+sql映射文件名，这样就能够保证namespace的值是唯一的 例如namespace="me.gacl.mapping.userMapper"就是me.gacl.mapping(包名)+userMapper(userMapper.xml文件去除后缀) -->
+<mapper namespace="com.ye.dao.UserDao">
+
+
+	<select id="getUserIsExit" resultMap="findMap">
+		select * from account t where shAccount = '0' or szAccount = '0'
+	
+	</select>
+
+
+	<insert id="save">
+		<selectKey keyProperty="count" resultType="String" order="BEFORE">
+			select count(1) from account t where t.aid = #{aid}
+		</selectKey>
+		<if test="count > 0">
+			update account
+			<trim prefix="set" suffixOverrides=",">
+				<if test="account != null">account = #{account, jdbcType=VARCHAR},</if>
+				<if test="name != null">name = #{name, jdbcType=VARCHAR},</if>
+				<!-- <if test="tradeCode != null">tradeCode = #{tradeCode, jdbcType=VARCHAR},</if> -->
+				<if test="unionId != null">ps_login_union_id = #{unionId, jdbcType=VARCHAR},</if>
+				<if test="tokenId != null">ps_login_token_id = #{tokenId,jdbcType=VARCHAR},</if>
+				<if test="appName != null">ps_login_app_name = #{appName,jdbcType=VARCHAR},</if>
+				<if test="updateTime != null">updateTime = #{updateTime,jdbcType=VARCHAR},</if>
+				<if test="isWeiTuo != null">isWeiTuo = #{isWeiTuo,jdbcType=VARCHAR},</if>
+				<if test="keYongZiJing != null">keYongZiJing = #{keYongZiJing,jdbcType=VARCHAR},</if>
+				<if test="szAccount != null">szAccount = #{szAccount,jdbcType=VARCHAR},</if>
+				<if test="shAccount != null">shAccount = #{shAccount,jdbcType=VARCHAR},</if>
+			</trim>
+			where aid = #{aid}
+		</if>
+		<if test="count == 0">
+			insert into account
+			(aid,
+			account,
+			name,
+			<!-- tradeCode, -->
+			ps_login_token_id,
+			ps_login_union_id,
+			ps_login_app_name,
+			updateTime,
+			isWeiTuo,
+			keYongZiJing,
+			szAccount,
+			shAccount
+			)
+			values
+			(
+			#{aid, jdbcType=VARCHAR},
+			#{account, jdbcType=VARCHAR},
+			#{name, jdbcType=VARCHAR},
+			<!-- #{tradeCode, jdbcType=VARCHAR}, -->
+			#{tokenId, jdbcType=VARCHAR},
+			#{unionId, jdbcType=VARCHAR},
+			#{appName, jdbcType=VARCHAR},
+			#{updateTime, jdbcType=VARCHAR},
+			#{isWeiTuo, jdbcType=VARCHAR},
+			#{keYongZiJing, jdbcType=VARCHAR}
+			#{szAccount, jdbcType=VARCHAR}
+			#{shAccount, jdbcType=VARCHAR}
+			)
+		</if>
+	</insert>
+</mapper>

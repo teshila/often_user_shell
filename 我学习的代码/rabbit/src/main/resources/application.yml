@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: 192.168.31.25
+    username: rabbitmq
+    password: rabbitmq
+    port: 5672
+
+  cloud:
+    zookeeper:
+      connect-string: 192.168.31.25:2181
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"

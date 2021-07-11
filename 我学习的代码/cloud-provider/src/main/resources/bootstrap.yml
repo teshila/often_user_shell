@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+    config:
+      server:
+        git:
+          uri: https://gitee.com/_sky/spring-boot-resources
+          username: 1039288191@qq.com
+          password: 015310qq
+  application:
+    name: config
+
+

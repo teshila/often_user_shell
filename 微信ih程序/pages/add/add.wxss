@@ -1,0 +1,35 @@
+/* pages/add/add.wxss */
+
+.add{
+  margin-top: 30px;
+}
+.tips{
+  padding-left: 24px;
+}
+
+
+
+button{
+  
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  }
+  .btnImg {
+    margin-right: 8rpx;
+    width: 46rpx;
+    height: 46rpx;
+    float: left;
+  }
+  
+button:after {
+  border-radius: 98rpx;
+  border: 0; 
+}

@@ -1,0 +1,13 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        register: false
+
+logging:
+  level:
+    com.ly: debug

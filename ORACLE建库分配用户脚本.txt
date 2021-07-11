@@ -1,0 +1,28 @@
+https://jingyan.baidu.com/article/dca1fa6f1954abf1a44052d2.html
+
+
+
+
+
+1194966721
+
+
+1324413455
+
+
+
+
+--开辟一片山头
+CREATE TABLESPACE ye_tablespace
+DATAFILE 'c:\temp\ye.DBF'
+SIZE 500M; 
+
+--指定山大王
+CREATE USER ye
+IDENTIFIED BY 123456
+DEFAULT TABLESPACE ye_tablespace;
+
+
+--分配权限
+--把CONNECT、RESOURCE角色授予用户epet。
+GRANT CONNECT,RESOURCE TO ye;
