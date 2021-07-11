@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd 
+http://www.springframework.org/schema/mvc 
+http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+
+	<!-- https://www.cnblogs.com/wlxslsb/p/10895574.html -->
+	
+	<!-- https://blog.51cto.com/3131854/1566381 -->
+    <!-- 要调用的工作类 -->
+    <bean id="MyJob" class="com.ly.test.JobTst"></bean>
+
+    <!-- 定义调用对象和调用对象的方法 -->
+    <bean id="JobWork"       class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <!-- 调用的类 -->
+        <property name="targetObject" ref="MyJob"></property>
+        <!-- 调用类中的方法 -->
+        <property name="targetMethod">
+           <list></list>
+        </property>
+    </bean>
+
+    <!-- 定义触发时间 -->
+    <bean id="JobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="JobWork" />  
+        <!-- 每隔1分钟审批一次 -->  
+        <property name="cronExpression" value="0/1 * * * * ?" />  
+    </bean>
+
+    <bean id="JobSchedule" lazy-init="false" autowire="no"
+        class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="JobTrigger" />
+            </list>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,15 @@
+<!--pages/add/add.wxml-->
+
+<view class="add">
+  <text class="tips">选择记账录入的方式</text>
+</view>
+
+<view class="add">
+
+<view class="add_item"> <button bindtap="clickMe" ><image class='btnImg' src='../images/1.png'></image><view>手动录入</view></button></view>
+<view class="add_item" > <button bindtap="clickMe"><image class='btnImg' src='../images/1.png'></image>语音录入</button></view>
+<view class="add_item"><button bindtap="clickMe"><image class='btnImg' src='../images/1.png'></image>拍照录入</button></view>
+<view class="add_item"><button bindtap="clickMe"><image class='btnImg' src='../images/1.png'></image>支付宝导入</button></view>
+<view class="add_item" ><button bindtap="clickMe"><image class='btnImg' src='../images/1.png'></image>微信导入</button></view>
+<view class="add_item" ><button bindtap="clickMe"><image class='btnImg' src='../images/1.png'></image>邮箱导入</button></view>
+</view>

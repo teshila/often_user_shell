@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/add/add",
+    "pages/introduce/introduce",
+    "pages/cards/mycards"
+  ],
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "爱记账，爱生活",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#000"
+  },
+  "tabBar": {
+  
+    "list": [
+      {
+        "pagePath": "pages/introduce/introduce",
+        "text": "首页",
+        "iconPath":"pages/images/1.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "录入我的账单",
+        "iconPath":"pages/images/2.png"     
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "我的记账",
+        "iconPath":"pages/images/3.png"
+      },
+      {
+        "pagePath": "pages/cards/mycards",
+        "text": "我的卡片",
+        "iconPath":"pages/images/4.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

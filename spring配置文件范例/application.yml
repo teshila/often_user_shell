@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///testdb?useSSL=true
+    username: root
+    password: 123
+  application:
+    name: provider
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+# 配置打印SQL的日志
+logging:
+  level:
+    com.cloud.demo.microprovider.mapper:  debug
+
