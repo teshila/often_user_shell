@@ -1,0 +1,1 @@
+select owner, table_name from all_tables where table_name = upper('nb_qy_jbxx');

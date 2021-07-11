@@ -1,0 +1,83 @@
+{
+	"status":1,
+	"mag":"success",
+	"imgsrc":[
+				{
+					"id":3001,
+					"content":"【包邮包税】Yves saint Laurent/圣罗兰 女士深绿色牛皮单肩包",
+					"price":"1696",
+					"liimg":[	"detailed/16976509.jpg",
+								"detailed/16976509_2.jpg",
+								"detailed/16976509_3.jpg",
+								"detailed/16976509_4.jpg"
+								
+							],
+					"bigImg":[	
+								"detailed/16976509.jpg",
+								"detailed/16976509_2.jpg",
+								"detailed/16976509_3.jpg",
+								"detailed/16976509_4.jpg"
+							]
+				},
+				{
+					"id":3002,
+					"content":"GOLDEN GOOSE/GOLDEN",
+					"price":"16675",
+					"liimg":["detailed/e302a3356e3940bd9265c27fc9813573.jpg"],
+					"bigImg":["detailed/e302a3356e3940bd9265c27fc9813573.jpg"]
+				},
+				{
+					"id":3003,
+					"content":"VENIMEUX Mini Bucket系列迷你流苏水桶包-藏蓝 ",
+					"price":"2000",
+					"liimg":[
+								"detailed/14719064_4.jpg",
+								"detailed/14719064.jpg",
+								"detailed/14719064_2.jpg",
+								"detailed/14719064_3.png"
+							],
+					"bigImg":[	
+								"detailed/14719064_4.jpg",
+								"detailed/14719064.jpg",
+								"detailed/14719064_2.jpg",
+								"detailed/14719064_3.png"
+							]
+				},
+				{
+					"id":3004,
+					"content":"EONE Bradley Black 超轻钛金属表壳触感磁力腕",
+					"price":"1000",
+					"liimg":[
+								"detailed/14092865.jpg",
+								"detailed/14092865_2(1).jpg",
+								"detailed/14092865_3.jpg",
+								"detailed/14092865_4.jpg"
+							],
+					"bigImg":[
+								"detailed/14092865_1.jpg",
+								"detailed/14092865_2(1).jpg",
+								"detailed/14092865_3.jpg",
+								"detailed/14092865_4.jpg"
+							]		
+				},
+				{
+					"id":3005,
+					"content":"Burlee Ugg Since 1974雪地靴 38码",
+					"price":"1805",
+					"liimg":[
+								"detailed/5427f18139894ae1a24490e9af7201f7.jpg",
+								"detailed/ed4a6544dc23408e85ad310b691f096b.jpg",
+								"detailed/400193aa583f4b54ad72c8b23eba18e8.jpg",
+								"detailed/caaefb6ec0ae49109a04b2cb0b1e67d8.jpg"
+							],
+					"bigImg":[
+								"detailed/5427f18139894ae1a24490e9af7201f7(1).jpg",
+								"detailed/ed4a6544dc23408e85ad310b691f096b.jpg",
+								"detailed/400193aa583f4b54ad72c8b23eba18e8.jpg",
+								"detailed/caaefb6ec0ae49109a04b2cb0b1e67d8.jpg"
+							]
+				}
+			]
+	
+
+}

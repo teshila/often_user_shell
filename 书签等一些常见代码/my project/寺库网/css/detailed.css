@@ -1,0 +1,260 @@
+@charset "utf-8";
+html,body {
+	width:100%;
+	height:100%;
+}
+#top {
+	width:1200px;
+	height:163px;
+	position:relative;
+	margin:0 auto;
+}
+.top-con {
+	width:1200px;
+	height:30px;
+	margin:0 auto;
+}
+.top-nav {
+	width:1200px;
+	height:133px;
+	margin:0 auto;
+	position:relative;
+}
+/*搜索框*/
+.top-nav-input {
+	width:416px;
+	height:35px;
+	background:#463B7F;
+	position:absolute;
+	top:25px;
+	left:270px;
+}
+.top-nav-search {
+	width:69px;
+	height:35px;
+	background:#52478E;
+	position:absolute;
+	top:25px;
+	left:680px;
+	color:#fff;
+	font-size:12px;
+	line-height:30px;
+	text-align:center;
+}
+/*中间的热搜词*/
+.top-nav-ahref {
+	width:652px;
+	height:15px;
+	position:absolute;
+	top:68px;
+	left:270px;
+}
+/*首页*/
+.top-nav-bottom {
+	width:926px;
+	height:45px;
+	position:absolute;
+	left:270px;
+	bottom:0px}
+/*二维码*/
+.top-nav-appright {
+	width:96px;
+	height:128px;
+	background:#463b7f;
+	position:absolute;
+	right:11px;
+	top:4px;
+}
+/*logo*/
+.logo-left {
+	width:205px;
+	height:135px;
+	position:absolute;
+	top:0;
+	left:-16px;
+	float:left;
+}
+/*顶部导航*/
+.top-conright {
+	width:537px;
+	height:30px;
+	float:right;
+	line-height:30px;
+}
+.top-con-spanleft {
+	height:30px;
+	float:left;
+	width:80px;
+	padding:0 8px;
+}
+.top-con-alefta {
+	width:36px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	margin-right:7px;
+}
+.top-con-aleftb {
+	width:48px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	margin-right:10px;
+}
+/*双I线*/
+.top-con-I {
+	float:left;
+}
+.top-con-acenterall {
+	width:48px;
+	height:30px;
+	float:left;
+}
+.top-con-center {
+	float:left;
+	width:213px;
+	height:30px;
+}
+.top-con-acentera {
+	padding:0 7px 0 10px;
+}
+.top-con-acenterc {
+	padding:0 18px 0 8px;
+}
+/*客户服务hover下拉列表acenterb*/
+.top-con-acenterb {
+	height:30px;
+	width:74px;
+	position:relative;
+	float:left;
+	text-align:center;
+}
+.top-con-acenterb-a {
+	display:block;
+	height:30px;
+	width:74px;
+	text-align:center;
+	line-height:30px;
+}
+.top-con-acenterb-a:hover {
+	color:#000000;
+}
+.top-con-acenterb:hover {
+	background:#F5F5F5;
+}
+/*hover*/
+.tophover:hover {
+	color:#463b7f;
+}
+/*.top-con-acenterb:hover .top-con-acenterb-tel {
+	display:block;
+}
+*/
+.top-con-acenterb-tel {
+	display:none;
+	background:#f5f5f5;
+	width:74px;
+	height:83px;
+	position:absolute;
+	top:23px;
+	right:0;
+	z-index:900;
+}
+.top-con-acenterb-telo {
+	display:block;
+	padding:2px 0;
+	font-size:12px;
+	line-height:12px;
+	text-align:center;
+	padding-bottom:0;
+}
+.top-con-acenterb-teloa {
+	padding:2px 0;
+	font-size:12px;
+	line-height:12px;
+}
+.top-con-acenterb-telo:hover {
+	color:#000000;
+}
+/*.top-con-acenterb-telo:last-child {
+	margin-top:0;
+}
+*/
+/*购物车*/
+.top-con-cart {
+	width:70px;
+	height:30px;
+	padding:0 18px 0 15px;
+	margin-left:4px;
+	background:url(../img/top_con_01.png) no-repeat;
+	background-position:0 50%;
+	display:inline-block;
+}
+/*logo*/
+.logo-left-secoo {
+	z-index:1;
+	width:42px;
+	height:100px;
+	margin:18px;
+	background:url(../img/top_logo_left_1.png) no-repeat;
+	position:absolute;
+	display:block;
+}
+.logo-left-gif {
+	z-index:1;
+	width:120px;
+	height:100px;
+	position:absolute;
+	background:url(../img/top_logo_left_2.gif) no-repeat;
+	display:block;
+	left:78px;
+	top:0;
+}
+/*输入框*/
+.top-nav-input {
+	width:412px;
+	height:31px;
+	border:2px solid #463b7f;
+}
+.top-nav-input-text {
+	width:392px;
+	height:27px;
+	padding:2px 10px;
+	border:0;
+	outline:none;
+}
+.top-nav-search:hover {
+	background:#463b7f;
+}
+/*中间链接*/
+.top-nav-ahref-all {
+	margin-right:26px;
+	float:left;
+}
+.top-nav-ahref-all:hover {
+	text-decoration:underline;
+	color:#ff0000;
+}
+.top-nav-ahref-all:first-child {
+	margin-right:25px;
+}
+/*首页*/
+.top-nav-bottom-all {
+	float:left;
+	margin-right:40px;
+	line-height:45px;
+	text-align:center;
+	font-family:"微软雅黑";
+	color:#333;
+}
+.top-nav-bottom-all:nth-child(2) {
+	background:url(../img/hot.gif) no-repeat right 0;
+}
+.top-nav-appright {
+	background:url(../img/apps_bg.gif) no-repeat;
+}
+.top-nav-bottom-all:hover {
+	color:#463b7f;
+}

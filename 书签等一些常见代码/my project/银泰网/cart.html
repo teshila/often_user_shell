@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/cart.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/cart.js"></script>
+	</head>
+
+	<body>
+		<div id="wrap-head">
+			<div class="head">
+				<ul class="head-left fl">
+					<li>
+						<a href="#index.html" class="yt">
+							<i></i> 银泰首页
+						</a>
+					</li>
+					<li class="bord"></li>
+					<li class="wx">
+						<div class="wx1">
+							<a href="#" class="wxh">
+								<i></i> 微信
+								<b></b>
+							</a>
+							<div class="wxp">
+								<img src="img/wechat.png" alt="" />
+							</div>
+						</div>
+					</li>
+					<li class="bord"></li>
+					<li class="phone">
+						<div class="phone1">
+							<a href="#" class="ph">
+								<i></i> 手机银泰
+								<b></b>
+							</a>
+							<div class="phoneP">
+								<img src="img/appphone.png" alt="" />
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="head-right fr">
+					<div class="rightL fl">
+						<span>Hi，欢迎来到银泰网！</span>
+						<a href="login.html" class="login-index">登录</a>
+						<a href="register.html" class="register-index">注册</a>
+					</div>
+					<ul class="rightR fl">
+						<li class="log"></li>
+						<li>
+							<a href="#">我的订单</a>
+						</li>
+						<li class="log"></li>
+						<li class="change">
+							<div class="yr">
+								<a href="#" class="myt">
+									我的银泰
+									<b></b>
+								</a>
+								<div class="non">
+									<p>
+										<a href="#">我的收藏</a>
+									</p>
+									<p>
+										<a href="#">我的余额</a>
+									</p>
+									<p>
+										<a href="#">我的银元</a>
+									</p>
+									<p>
+										<a href="#">我的银泰卡</a>
+									</p>
+									<p>
+										<a href="#">我的优惠券</a>
+									</p>
+									<p class="border0">
+										<a href="#">我的积分</a>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="log"></li>
+						<li>
+							<a href="#">银泰卡</a>
+						</li>
+						<li class="log"></li>
+						<li>
+							<a href="#">帮助中心</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="yt-wrap">
+			<h1><a href="index.html"></a></h1>
+		</div>
+		<div  id="wrap-cart">
+			<div class="cart">
+				<img src="img/mobile-adt.png" alt="" />
+				<!--<img src="img/mobile-adt.png" alt=""  />-->
+				<div class="bdwraper">
+					<div class="CartSteps">
+						<h2 class="fl"></h2>
+						<div class="sp-step fr">
+							<span class="clickone">
+	    						查看购物袋
+	    						<em>STEP 1</em>
+	    					</span>
+							<span class="clicktwo">请填写订单
+	    				     <em>STEP 2</em>
+	    				    </span>
+							<span>订单确认
+	    				     <em>STEP 3</em>
+	    				    </span>
+						</div>
+					</div>
+					<div class="CommodityBox">
+						<div class="EmptyExplain">
+							<div class="EmptyIco fl"></div>
+							<div class="EmptyDetails fl">
+								<h3>您的购物袋内尚未添加产品。</h3>
+								<p>请尽情选购您要购买的产品吧! 祝您购物愉快!</p>
+								<a href="index.html" class="c-btn">继续购物</a>
+							</div>
+						</div>
+					</div>
+					<div class="cart-con">
+						<div class="CommodityCate">
+							<span class="th-chk">
+								<em>
+									<input type="checkbox" id="allChecked" checked="checked" />
+								</em>&nbsp;&nbsp;全选
+							</span>
+						    <span class="th-item">商品</span>
+						    <span class="th-price">单价</span>
+						    <span class="th-amount">数量</span>
+						    <span class="th-sum">获得积分</span>
+						    <span class="th-op">操作</span>
+						</div>
+					    <div id="CommodityBox">
+					    	<div class="CommodityTitle">
+					    		<h3>普通商品</h3>
+					    	</div>
+					    </div>
+					    <div class="PayofTable">
+					    	<div class="PayofOne">
+					    		<div class="fl RegretOption clearfix">
+					    			<div class="quanxuan fl">
+					    				<input type="checkbox" id="allChecked1"checked="checked"  />
+					    				&nbsp;全选
+					    			</div>
+					    		    <a href="#" id="ClearCartBtn">删除选中的商品</a>
+					    		    <a href="index.html" class="fl">继续购物</a>
+					    		</div>
+					    	    <p class="fr J-freight">请选择商品进行结算</p>
+					    	</div>
+					        <div class="PayofTwo">
+					        	<div class="TotalAmount fr">
+					        		<span>商品总价：<em>¥</em><strong class="total">109.00</strong></span>
+					        		<span class="math">-</span>
+					        		<span>节省金额：<strong class="save">¥0.00</strong></span>
+					        		<span class="math">+</span>
+					        		<span>运费：<strong class="freight">00.00</strong></span>
+					        		<span class="math">=</span>
+					        		<span>结算金额：<em>¥</em><strong class="pay">124.00</strong></span>
+					        	</div>
+					        </div>
+					        <div class="PayofFou">
+					        	<div class="PayofFouCont">
+					        		<div class="Accountsbox fr"></div>
+					        		<div class="AccountsNum fr">
+					        			结算金额：<i class="cue">(包含运费)</i>
+					        			<em>¥</em><strong class="pay-total">24.00</strong>
+					        		</div>
+					        	</div>
+					        </div>
+					    </div>
+					</div>
+                    <div class="interested">
+						<div class="inter-title">
+							<span class="none bfd_h cursor">购买了同样商品的顾客还购买了<i></i></span>|
+							<span class="bfd_i">根据您的浏览为您推荐<i></i></span>|
+							<span class="bfd_j">看了又看<i></i></span>|
+						</div>
+						<div class="inter-mian">
+							<div class="inter-solo">
+								<span class="inter-prev fl"><a href="#"></a></span>
+								<span class="inter-next fr"><a href="#"></a></span>
+								<!--<ul class="eva-switchable-triggers">
+	    		        			<li class="eva-switchable-active">•</li>
+	    		        			<li >•</li>
+	    		        			<li >•</li>
+	    		        		</ul>-->
+								<div class="inter-list">
+									<ul class="inter-list-mian bfd_d">
+									</ul>
+									<ul class="inter-list-mian bfd_a">
+									</ul>
+									<ul class="inter-list-mian bfd_c">
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-header">
+				<span class="tel fl">
+	    			<strong>400-119-1111</strong>
+	    			<i>8:00-24:00</i>
+	    			<b>service@yintai.com</b>
+	    		</span>
+				<span class="no-care fl">
+	    	    	<strong>
+	    	    		<i>15天</i>
+	    	    		无忧退换货
+	    	    	</strong>
+	    	    	<b>为您提供优质售后服务</b>
+	    	    </span>
+				<span class="true-goods fl">
+	    	    	<strong>
+	    	    		<i>100%</i>
+	    	    		正品保证
+	    	    	</strong>
+	    	    	<b>品质护航 购物无忧</b>
+	    	    </span>
+				<span class="no-pay fl">
+	    	    	<strong>
+	    	    		<i>满199</i>
+	    	    		免运费
+	    	    	</strong>
+	    	    	<b>为您提供便利物流</b>
+	    	    </span>
+			</div>
+			<div class="footer-nav">
+				<a href="#">关于银泰</a>|
+				<a href="#">帮助中心</a>|
+				<a href="#">退换货政策</a>|
+				<a href="#">网站地图</a>|
+				<a href="#">代理合作</a>|
+				<a href="#">品牌招商</a>|
+				<a href="#">商务合作</a>|
+				<a href="#">网站联盟</a>|
+				<a href="#">联系我们</a>|
+				<a href="#">加入银泰</a>|
+				<a href="#">版权声明</a>|
+				<a href="#">法律声明</a>
+			</div>
+			<div class="footer-bottom">
+				<p>
+					<a href="#">浙ICP备10200233号</a>
+					<a href="#">京公网安备110105019085</a>
+					<a href="#">增值电信业务经营许可证：浙B2-20110005</a>
+				</p>
+				<p>Yintai © 2016, 银泰电子商务有限公司.</p>
+			</div>
+			<div class="footer-footer">
+				<a href="#"><img src="img/fo1.png" alt="" /></a>
+				<a href="#"><img src="img/fo2.png" class="pict1" alt="" /></a>
+				<a href="#"><img src="img/fo3.gif" alt="" /></a>
+			</div>
+		</div>
+	</body>
+
+</html>

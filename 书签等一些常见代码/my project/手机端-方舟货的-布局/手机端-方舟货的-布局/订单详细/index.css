@@ -1,0 +1,179 @@
+ * {
+  	margin: 0;
+  	padding: 0;
+  }
+  
+  html,
+  body {
+  	width: 100%;
+  	height: 100%;
+  }
+  body{
+  	background: #ebebeb;
+  }
+
+header {
+  	width: 100%;
+  	height: 1.86rem;
+  	text-align: center;
+  	box-sizing: border-box;
+  	border-bottom: 2px solid #07ca61;
+  	position: relative;
+  	color: #333;
+  	font: 0.76rem/1.82rem '黑体';
+  	background: #fff;
+  }
+  
+  header button {
+  	position: absolute;
+  	width: 1.24rem;
+  	height: 1.86rem;
+  	left: 0;
+  	top: 0;
+  	border: 0;
+  	outline: none;
+  	background: url('img/back.png') no-repeat center;
+  }
+  .main{
+  	padding: 0 0.4rem;
+  	background: #fff;
+  	margin-top: 0.4rem;
+  }
+.top{
+	padding:0.4rem;
+  	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	background: #fff;
+}
+.infor{
+	display: flex;
+   /* align-items: center;*/
+}  
+.infor img{
+	width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 0.4rem;
+}
+.message{
+	font-size: 0.64rem;
+	color: #333;
+	line-height: 0.64rem;
+}
+
+.car{
+	font-size: 0.48rem;
+	color: #969696;
+	line-height: 0.48rem;
+	margin: 0.36rem 0 0.4rem;
+}
+.stars{
+	display: flex;
+	height: 0.4rem;
+    width: 100%;
+}
+.wjx{
+	width: 0.4rem;
+	height: 0.4rem;
+	background: url("img/sjx.png") no-repeat center;
+	margin-right: 0.08rem;
+	background-size: cover;
+}
+.active{
+	background:url("img/star.png") no-repeat center/cover;
+}
+.tel{
+	display: block;
+	width: 1.6rem;
+	height: 1.6rem;
+	background: url(img/tel.png) no-repeat center;
+	background-size: cover;
+}
+.common{
+	height: 1.78rem;
+	border-bottom: 1px solid #dadada;
+	box-sizing: border-box;
+	font-size: 0.64rem;
+	color: #333;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;	
+}
+.main .first{
+	height:1.36rem;
+	line-height: 1.34rem;
+}
+.main .first .right{
+	color: #07CA61;
+	font-size: 0.52rem;
+}
+.main .other{
+	height: 2.6rem;
+}
+.main .other .lable-other{
+	 align-self: flex-start;    /*单独设置里面的子元素的对齐方式*/
+     margin-top: 0.6rem;
+     line-height: 0.64rem;
+}
+.left{
+	color: #969696;
+}
+.first{
+	padding-left: 0.72rem;
+	font-size: 0.48rem;
+	background: url(img/time.png) no-repeat left center/0.52rem;
+}
+.main .right{
+	display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.main .other .right span{	 
+	color: #969696;	
+}
+.common-price{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.6rem;
+	font-size: 0.64rem;
+    color: #969696;
+}
+.price-num{
+	color: #333;
+}
+.use-num{
+	color: #f32f00;
+}
+.dinner-yhq-chose  {
+            display: flex;
+            align-items: center;
+        }
+.qh{
+	display: block;
+    width: 0.28rem;
+    height: 0.48rem;
+    margin-left: 0.36rem;
+    background: url('img/arrow-right.png') no-repeat center;
+}
+.total{
+	display: flex;
+    justify-content: space-between;
+    font-size: 0.64rem;
+    color: #333;
+    margin-top: 0.72rem;
+}
+ .dinner-total-num {
+    color: #f32f00;
+    font-size: 0.84rem;
+}
+.dinner-submit-button{
+	width: 100%;
+    height: 1.92rem;
+    background: #07ca61;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.64rem;
+    margin-top: 1rem;
+}
+

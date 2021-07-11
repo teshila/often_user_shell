@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/baseCss.css"/>
+		<link rel="stylesheet" type="text/css" href="css/detailed.css"/>
+		<link rel="stylesheet" type="text/css" href="css/indextop.css"/>
+		<style type="text/css">
+			.a {
+				height:30px;
+				width:1200px;
+				background:#E0E0E0;
+				margin:0 auto;
+				line-height:30px;
+			}
+			.ahref:hover {
+				color:red;
+				text-decoration:underline;
+			}
+			.right {
+				float:right;
+				padding-right:20px;
+			}
+			.deta {
+				width:1200px;
+				height:410px;
+				margin:0 auto;
+				position:relative;
+			}
+			.small {
+				padding-left:20px;
+				padding-right:20px;
+				width:81px;
+				height:400px;
+				border:1px solid #E0E0E0;
+				border-right:0;
+				float:left;
+			}
+			.bottom {
+				width:1200px;
+				margin:0 auto;
+			}
+			/*放大镜*/
+			.middle {
+				cursor:pointer;
+				position:relative;
+				width:400px;
+				height:400px;
+				border:1px solid #E0E0E0;
+				float:left;
+			}
+			.big {
+				display:none;
+				background:#fff;
+				position:absolute;
+				width:400px;
+				height:400px;
+				border:1px solid #E0E0E0;
+				overflow:hidden;
+				top:0;
+				left:513px;
+				border-top:0;
+			}
+			.smallDiv {
+				display:none;
+				background:url(detailed/zoomspan.gif) repeat;
+				opacity:0.8;
+				position:absolute;
+				top:0;
+				left:0;
+				width:100px;
+				height:100px;
+				border-top:0;
+			}
+			.bimg {
+				position:absolute;
+				top:0;
+				left:0;
+				width:500px;
+				height:500px;
+			}
+			.simg {
+				position:absolute;
+				top:0;
+				left:0;
+			}
+			.list {
+				width:70px;
+				height:230px;
+			}
+			.clickimg {
+				height:68px;
+				width:68px;
+				border:1px solid #E0E0E0;
+			}
+			.divRight {
+				width:580px;
+				height:400px;
+				float:left;
+			}
+			.p1 {
+				border-bottom:1px dotted black;
+				width:577px;
+				height:48px;
+				padding-bottom:40px;
+				color:#000000;
+				font-size:20px;
+				line-height:48px;
+				text-align:left;
+				font-weight:bold;
+			}
+			.p2 {
+				border-bottom:1px dotted black;
+				width:577px;
+				height:107px;
+				padding-bottom:40px;
+			}
+			.p3 {
+				width:577px;
+				height:80px;
+				margin-top:20px;
+				padding-left:20px;
+			}
+			/*单价*/
+			.price {
+				font-size:30px;
+				color:red;
+				display:inline-block;
+				line-height:18px;
+				font-weight:700;
+			}
+			/*加减*/
+			.btnup {
+				width:30px;
+				height:30px;
+				border:0;
+				outline:none;
+				font-size:16px;
+				font-weight:bold;
+				cursor:pointer;
+			}
+			.btndown {
+				width:30px;
+				height:30px;
+				border:0;
+				outline:none;
+				font-size:16px;
+				font-weight:bold;
+				cursor:pointer;
+			}
+			.btndown:hover {
+				background:navy;
+				color:#fff;
+			}
+			.btnup:hover {
+				background:navy;
+				color:#fff;
+			}
+			/*数量*/
+			.number {
+				width:30px;
+				height:30px;
+				border:0;
+				outline:none;
+				text-align:center;
+			}
+			.buy {
+				width:166px;
+				height:51px;
+				background:red;
+				display:block;
+				float:left;
+				margin-right:20px;
+				color:#fff;
+				font-size:18px;
+				line-height:45px;
+				text-align:center;
+				font-family:"微软雅黑"}
+			.cart {
+				outline:none;
+				cursor:pointer;
+				width:160px;
+				height:45px;
+				border:3px solid red;
+				display:block;
+				float:left;
+				color:#000000;
+				font-size:18px;
+				line-height:45px;
+				text-align:center;
+				font-family:"微软雅黑";
+				margin-right:20px;
+			}
+			.cart:hover {
+				background:red;
+				color:#FFFFFF;
+				border-color:#fff;
+			}
+			.buy {
+				cursor:pointer;
+				width:160px;
+				height:51px;
+				background:red;
+				display:block;
+				float:left;
+				color:#fff;
+				font-size:18px;
+				line-height:45px;
+				text-align:center;
+				font-family:"微软雅黑"}
+		</style>
+		<script src="js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/big.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/detailed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/clickCart.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="top">
+				<div class="top-con">
+					<div class="top-conright clearfix">
+						<span class="top-con-spanleft">欢迎光临寺库</span>
+							<a class="top-con-alefta tophover" href="loading.html">请登录</a>
+							<a class="top-con-aleftb tophover" href="register.html">免费注册</a>
+						<span class="top-con-I">|</span>
+						<div class="top-con-center">
+							<a class="top-con-acentera top-con-acenterall tophover" href="#">我的订单</a>
+							<div class="top-con-acenterb">
+										<a  href="#" class="top-con-acenterb-a tophover">客户服务</a>
+								<div class="top-con-acenterb-tel">
+									<a href="#" class="top-con-acenterb-telo">养护中心</a>
+									<a href="#" class="top-con-acenterb-telo">帮助中心</a>
+									<span class="top-con-acenterb-teloa">贵宾专线</span>
+									<span class="top-con-acenterb-teloa">400-87-56789</span>
+								</div>
+							</div>
+							<a class="top-con-acenterc top-con-acenterall tophover" href="#">媒体聚焦</a>
+						</div>
+						<span class="top-con-I">|</span>
+						<a class="top-con-cart tophover" href="cart.html">购物车(<span class="num">0</span>)</a>
+					</div>
+				</div>
+			 	<div class="top-nav">
+					<div class="top-nav-input">
+						<input class="top-nav-input-text" type="text" placeholder="HUGO BOSS/雨果波士"/>
+					</div>
+					<div class="top-nav-search">搜索</div>
+					<div class="top-nav-ahref">
+						<a href="#" class="top-nav-ahref-all">秋冬显瘦连衣裙推荐</a>
+						<a href="#" class="top-nav-ahref-all">牛仔裤999元封顶</a>
+						<a href="#" class="top-nav-ahref-all"> NEW折扣盛典 </a>
+						<a href="#" class="top-nav-ahref-all">这季怎能少了贝壳包 </a>
+						<a href="#" class="top-nav-ahref-all">手腕上的品味不用花大价钱</a>
+					</div>
+					<div class="top-nav-bottom">
+						<a href="index-main.html" class="top-nav-bottom-all">首页</a>
+						<a href="#" class="top-nav-bottom-all">海外直邮</a>
+						<a href="#" class="top-nav-bottom-all">闪购SALE</a>
+						<a href="#" class="top-nav-bottom-all">我卖我拍</a>
+						<a href="#" class="top-nav-bottom-all">品牌旗舰店</a>
+						<a href="#" class="top-nav-bottom-all">中国精品</a>
+						<a href="#" class="top-nav-bottom-all">男士</a>
+						<a href="#" class="top-nav-bottom-all">女士</a>
+						<a href="#" class="top-nav-bottom-all">豪车</a>
+					</div>
+					<div class="top-nav-appright">
+					</div>
+				</div>
+				<div class="logo-left">
+					<a href="#" class="logo-left-secoo"></a>
+					<a href="#" class="logo-left-gif"></a>
+				</div> 
+			</div>
+		<div class="a"><a href="index-main.html" class="ahref">返回首页</a> <span class="right">商品编号:&nbsp;<i class="id"></i></span></div>
+		<div class="deta">
+			<div class="small">
+				<ul class="list">
+				</ul>
+			</div>
+			<div class="middle">
+				<img src="" class="simg"  width="400" height="400" alt="" />
+				<div class="smallDiv"></div>
+			</div>
+			<div class="big"><img class="bimg" src="" /></div>
+			<div class="divRight">
+			<div class="p1"></div>
+			<div class="p2">
+				<p class="titleh3" style="padding:10px;"><span>寺库价&nbsp;&nbsp;<i style="font-size: 18px;color: #000000;font-family: '微软雅黑';">¥</i>&nbsp;<i class="price" ></i></span></p>
+				<p style="padding: 10px;"><span>发货地韩国 &nbsp;有货 &nbsp;预计7-15个工作日内送达</span></p>
+				<p style="padding: 10px;">温馨提示&nbsp;&nbsp; 本商品无质量问题不支持退换货</p>
+			</div>
+			<div class="p3">
+				<!--<p><span>购买数量</span >&nbsp;&nbsp;<button class="btnup">-</button><input type="text" name="" id="" value="1" class="number"/><button class="btndown">+</button> </p>-->
+				<p style="padding:20px 0;" class="pcart">
+				<!--<a href="cart.html" class="buy">立即购买</a>-->
+				<!--<a  class="cart">加入购物车</a>-->
+				<a href="index-main.html" class="buy">继续购物</a></p>
+			</div>
+			</div>
+	</div>
+		<div class="bottom"><img src="detailed/20170109165307.png"/></div>
+		<div style="width: 100%;height: 1000px;background: #ECECEC;">
+			<div style="width: 1200px;height: 480px;margin: 0 auto;"><img src="detailed/20170110190435.png"/></div>
+			<div style="width: 1200px;height: 480px;margin: 0 auto;"><img src="detailed/20170110190435.png"/></div>
+		</div>
+	</body>
+</html>

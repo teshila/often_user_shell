@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>计算器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-size:12px;
+            font-family:Arial,Georgia,"Times New Roman",Times,serif;
+            color:#555;
+            text-align:center;
+            background-color:#e2e2e2;
+        }
+        ul,li {
+            list-style: none;
+        }
+        h6 {
+            font-size:20px;
+            text-align: center;
+        }
+        .clearfix {
+            zoom: 0;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+        }
+        .calculator {
+            width:94%;
+            margin:50px auto;
+            background-color:#f2f2f2;
+            box-shadow: 0 0 20px pink;
+            border-radius: 10px;
+            padding-bottom: 4px;
+        }
+
+        .calculator ul {
+            margin:5px 14px;
+        }
+        .calculator li {
+            float:left;
+            width:14.43%;
+            margin:0.5%;
+            line-height:32px;
+            font-size:32px;
+            background-color:#eaeaea;
+            padding:2.28%;
+        }
+        .calculator li.tool {
+            background-color:#738FD8;
+        }
+        .calculator li.D06A15 {
+            background-color:#D06A15;
+        }
+        .calculator li:hover {
+            background-color:#f9f9f9;
+            cursor:pointer;
+        }
+        .calculator li:active {
+            background-color:#fc0;
+            cursor:pointer;
+        }
+        .calculator li.tool:active {
+            background-color:#d8e8ff;
+            cursor:pointer;
+        }
+        .calcu-head {
+            padding:10px 15px 5px;
+        }
+        .screen {
+            width:97%;
+            height:42px;
+            line-height:42px;
+            padding:4px;
+            border:#e6e6e6 1px solid;
+            border-bottom:#f2f2f2 1px solid;
+            border-right:#f2f2f2 1px solid;
+            margin:10px auto;
+            direction:ltr;
+            text-align:right;
+            font-size:3em;
+            color:#999;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator" class="calculator">
+        <div id="calcu-head" class="calcu-head">
+            <h6>计算器</h6>
+        </div>
+        <form name="calculator">
+            <div id="calcu-screen" >
+                <!--配置显示窗口，使用onfocus="this.blur();"避免键盘输入 disabled 禁用-->
+                <input type="text" name="numScreen" id="result" class="screen" value="0" onfocus="this.blur();" disabled/>
+            </div>
+            <div id="calcu-btn">
+                <ul class="clearfix"> <!--配置按钮-->
+                    <li onclick="command(7)">7</li>
+                    <li onclick="command(8)">8</li>
+                    <li onclick="command(9)">9</li>
+                    <li class="tool" onclick="del()">←</li>
+                    <li class="tool" onclick="clearzero()">C</li>
+                    <li onclick="command(4)">4</li>
+                    <li onclick="command(5)">5</li>
+                    <li onclick="command(6)">6</li>
+                    <li class="tool" onclick="op(3)">×</li>
+                    <li class="tool" onclick="op(4)">÷</li>
+                    <li onclick="command(1)">1</li>
+                    <li onclick="command(2)">2</li>
+                    <li onclick="command(3)">3</li>
+                    <li class="tool" onclick="op(1)">+</li>
+                    <li class="tool" onclick="op(2)">-</li>
+                    <li onclick="command(0)">0</li>
+                    <li onclick="dzero()">00</li>
+                    <li onclick="dot()">.</li>
+                    <li class="tool" onclick="op(5)">%</li>
+                    <li class="tool D06A15" onclick="equal()">=</li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <script>
+         //获取文本框对象
+         var resultDom = document.getElementById("result");
+         //记录运算符之前的值
+         var oldNum = 0;
+         //记录运算符
+         var opeartor = 0;
+         //操作符锁
+         var flag = true;
+         //小数点锁
+         var dotMark = true;
+    	 function command(num){
+            //获取每次点击的数字
+            var str = resultDom.value;
+            //如果输入框是0那么那么就用""替代。否则用原值
+            str = (str =="0" ? "" : str);
+            //拼接每次用户点击的数字,放入结果框中.
+            resultDom.value = str + num;
+         };
+
+         //点击运算符
+         function op(mark){
+            if(flag){
+              //记录之前的值
+              oldNum = resultDom.value;
+              //保存操作符
+              opeartor = mark;
+              //清空值
+              resultDom.value = "";
+              //锁住操作,等点击等于才释放，或者清除才释放
+              flag = false;
+              //点击操作符解开小数点的锁
+              dotMark = true;
+            }
+         };
+
+         //运算结果
+         function equal(){
+            var num = resultDom.value;
+            var result = 0;
+            switch(opeartor){
+               case 1 : result = oldNum*1 + num*1; break;
+               case 2 : result = oldNum*1 - num*1; break;
+               case 3 : result = oldNum*1 * num*1; break;
+               case 4 : result = oldNum*1 / num*1; break;
+               case 5 : result = oldNum*1 % num*1; break;
+            };
+            resultDom.value = result;
+            //解开运算符和小数点的锁
+            flag = true;
+            //如果结果中有小数不能解开注意indexOf是字符串中的方法，
+            var r = resultDom.value;
+            dotMark = (r.indexOf('.')==-1 ? true : false);
+         };
+
+         //小数点
+         function dot(){
+             if(dotMark){
+               var str = resultDom.value;
+               resultDom.value = str+".";
+               dotMark = false;//锁住
+             }
+         };
+
+         //双0递增
+         function dzero(){
+            //获取每次点击的数字
+            var str = resultDom.value;
+            //如果输入框是0那么那么就用""替代。否则用原值
+            if(str=="0")return;
+            //拼接每次用户点击的数字,放入结果框中.
+            resultDom.value = str + "00";
+         };
+
+         //删除键
+         function del(){
+            var str = resultDom.value;
+            var r = str.substring(0,str.length-1);
+            if(r.indexOf('.'))
+            resultDom.value = r||0;
+         };
+
+         //清空所有
+         function clearzero(){
+            resultDom.value = "0";
+            voldNum = 0;
+           //记录运算符
+            opeartor = 0;
+           //操作符锁
+            flag = true;
+           //小数点锁
+            dotMark = true;
+         };
+    </script>
+</body>
+</html>

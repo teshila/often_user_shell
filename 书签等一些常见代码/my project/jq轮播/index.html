@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .clearfix {
+            zoom: 0;
+        };
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+        }
+        .wrap{
+            width: 541px;
+            margin: 100px auto;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .wrap .imgbox{
+            height: 360px;
+            position: relative;
+         }
+        .wrap .imgbox .nav li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /*opacity: 0;*/
+         }
+        .wrap .imgbox .nav li.active{
+            /*transition: all 1s ease;*/
+            /*opacity: 1;*/
+            z-index: 1;
+         }
+        .wrap .imgbox .con{
+            width: 80px;
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -40px;
+            z-index: 10;
+            font-size: 0;
+            display: inline-block;
+         }
+        .wrap .imgbox .con li{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background: #eee;
+            display: inline-block;
+         }
+        .wrap .imgbox .con li.active{
+            background: #f00;
+         }
+        .wrap .imgbox .con li:last-child{
+            margin-right: 0;
+         }
+    </style>
+</head>
+<body>
+
+    <div class="wrap" id="wrap">
+        <div class="group-btn">
+           <button id="prev">上一页</button>
+           <button id="next">下一页</button>
+        </div>
+        <div class="imgbox" id="box">
+            <ul class="nav">
+                <li class="active"><img src="imgs/2.jpg" alt=""></li>
+                <li><img src="imgs/3.jpg" alt=""></li>
+                <li><img src="imgs/4.jpg" alt=""></li>
+            </ul>
+
+            <ul class="con">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

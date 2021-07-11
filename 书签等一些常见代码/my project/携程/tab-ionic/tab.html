@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<link rel="stylesheet" href="ionic/css/ionic.min.css" />
+		<link rel="stylesheet" href="css/tab.css" />
+	</head>
+
+	<body ng-app="app">
+
+		<ion-nav-bar class="bar-positive">
+	        <ion-nav-back-button></ion-nav-back-button>
+	    </ion-nav-bar>
+	    <ion-nav-view></ion-nav-view>
+
+		<script type="text/javascript"
+			 src="ionic/js/ionic.bundle.min.js"></script>
+		<script src="js/app.js"></script>
+		<script type="text/ng-template" id="tab.html">
+			<ion-tabs class="tabs-light tabs-icon-top">
+				<ion-tab title="首页" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" href="#/tab/index">
+					<ion-nav-view name="home"></ion-nav-view>
+				</ion-tab>
+				<ion-tab title="新闻" icon-on="ion-ios-chatboxes" icon-off="ion-ios-chatboxes-outline" href="#/tab/news" badge="12">
+					<ion-nav-view name="news"></ion-nav-view>
+				</ion-tab>
+				<ion-tab title="社区" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" href="#/tab/commticy">
+					<ion-nav-view name="commticy"></ion-nav-view>
+				</ion-tab>
+				<ion-tab title="设置" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" href="#/tab/setting">
+					<ion-nav-view name="setting"></ion-nav-view>
+				</ion-tab>
+			</ion-tabs>
+
+		</script>
+
+		<script type="text/ng-template" id="home.html">
+			 <ion-view view-title="首页">
+				<ion-content>
+					<ion-slide-box style="width: 100%;height: 160px;" slide-interval="2000" auto-play="true" does-continue="true" pager-click="Change(index)" active-slide="cur">
+						<ion-slide>
+							<img ng-src="img/0.jpg" alt="">
+						</ion-slide>
+						<ion-slide>
+							<img ng-src="img/1.jpg" alt="">
+						</ion-slide>
+						<ion-slide>
+							<img ng-src="img/2.jpg" alt="">
+						</ion-slide>
+					</ion-slide-box>
+	
+					<ul class="main">
+						<li>
+							<ul class="list1">
+								<li>
+	
+									酒店
+									<i class="icon ion-home"></i>
+								</li>
+								<li class="myC">
+									<i class="icon ion-person"></i> 我的携程
+	
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list2">
+								<li class="first">
+	
+									机票
+									<i class="icon ion-plane"></i>
+								</li>
+								<li>
+									<ul class="data">
+										<li>火车票
+											<i class="icon ion-android-train"></i>
+										</li>
+										<li>用车
+											<i class="icon ion-model-s"></i>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list3">
+								<li>
+									旅游
+									<i class="icon ion-image"></i>
+	
+								</li>
+								<li>
+									景点门票
+									<i class="icon ion-pricetag"></i>
+								</li>
+								<li>
+									攻略社区
+									<i class="icon ion-person-stalker"></i>
+								</li>
+							</ul>
+						</li>
+					</ul>
+	
+				</ion-content>
+            </ion-view>  
+		</script>
+		<script type="text/ng-template" id="commticy.html">
+			<ion-view view-title="帖子">
+				<ion-content>
+					<div>
+						<ion-scroll zooming="true" direction="x">
+							<ul class="navlist">
+								<li ng-repeat="item in data" ng-click="change(item.fid)">{{item.name}}</li>
+							</ul>
+						</ion-scroll>
+					</div>			   	    	
+						<div class="list">	
+							<a class="item" ng-repeat="item in arrData" href="#/tab/commticy1/{{item.tid}}">
+                                 <h2>{{item.subject}}</h2>								
+							</a>							
+						</div>
+						<ion-infinite-scroll
+				            distance="20px"
+				            on-infinite="more()"
+				            ng-if="ifLoad"
+				        ></ion-infinite-scroll>		
+					</ion-content>
+			</ion-view>
+		</script>
+       
+        <script type="text/ng-template" id="commticy1.html">
+        <ion-view view-title="帖子详情">
+            <ion-content>
+                <ul class="list">
+                	<li class="item" ng-repeat="item in liData">
+                		<h2>帖子内容：{{item.message}}</h2>
+                		<p>帖子作者：{{item.author}}</p>
+                		<time>{{item.dateline+'000'|date:'yyyy年MM月dd日 hh时mm分ss秒'}}</time>
+                	</li>               	
+                </ul>
+               
+            </ion-content>
+        </ion-view>
+            
+    </script>
+		<script type="text/ng-template" id="news.html">
+			   <ion-view view-title="文章">
+			   	    <ion-content>
+			   	    	<div>
+			   	    		<ion-scroll zooming="true" direction="x">
+								<ul class="navlist">
+									<li ng-repeat="item in list" ng-click="click(item.catid)">{{item.catname}}</li>
+								</ul>
+							</ion-scroll>
+			   	    	</div>
+			   	    	
+						<div class="list">								
+								<a href="#/tab/news1/{{item.aid}}" class="item item-thumbnail-left" ng-repeat="item in listData">
+									 <img ng-src='http://www.phonegap100.com/data/attachment/{{item.pic}}'>
+                                     <h2>{{item.title}}</h2>
+								</a>																				
+						</div>
+						<ion-infinite-scroll
+				            distance="20px"
+				            on-infinite="more()"
+				            ng-if="ifLoad"
+				        ></ion-infinite-scroll>				
+					</ion-content>
+			   </ion-view>
+		</script>
+        
+        <script type="text/ng-template" id="news1.html">
+	        <ion-view view-title="新闻详情">
+	            <ion-content>
+	               <h2>标题：{{arr.title}}</h2>
+	               <p>简介：{{arr.summary}}</p>
+	               <p ng-bind-html="arr.content">内容：{{arr.content}}</p>
+	            </ion-content>
+	        </ion-view>
+	            
+	    </script>
+		<script type="text/ng-template" id="setting.html">
+             <ion-view view-title="我">
+				<ion-content>
+					<div class="login">
+						<span class="pic"></span> 立即登录
+					</div>
+					<ul class="list4">
+						<li>
+							<i class="icon ion-ios-star-outline"></i> 收藏
+						</li>
+						<li>
+							<i class="icon ion-email"></i> 消息
+						</li>
+					</ul>
+					<div class="list">
+	
+						<div class="item item-divider">
+	
+						</div>
+	
+						<div class="item item-toggle">
+							显示文章图片
+							<label class="toggle toggle-assertive">
+					       <input type="checkbox">
+					       <div class="track">
+					         <div class="handle"></div>
+					       </div>
+					    </label>
+						</div>
+						<div class="item item-divider">
+							关于
+	
+						</div>
+						<div class="item">
+							当前版本
+							<span class="item-note">
+					  	v2.2
+					  </span>
+						</div>
+						<div class="item">
+							意见反馈
+							<span class="item-note">
+					  	  Email:phonegap100@qq.com
+					  </span>
+						</div>
+						<div class="item">
+							关于作者
+						</div>
+						<div class="item">
+							关于phonegap中文网
+						</div>
+	
+					</div>
+	
+				</ion-content>
+            <ion-view
+		</script>
+
+	</body>
+
+</html>

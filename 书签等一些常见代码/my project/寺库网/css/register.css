@@ -1,0 +1,235 @@
+.top {
+	width:100%;
+	height:70px;
+	background:#000;
+}
+.top-con {
+	width:1200px;
+	height:70px;
+	background:#000;
+	margin:0 auto;
+}
+.top-nav-img {
+	float:left;
+	width:30px;
+	height:70px;
+}
+.top-right {
+	width:210px;
+	height:70px;
+	float:right;
+}
+.top-right a {
+	display:block;
+	padding-right:20px;
+	color:#fff;
+	float:left;
+	width:50px;
+	height:70px;
+	line-height:70px;
+	text-align:center;
+}
+.top-right a:hover {
+	color:#F19108;
+}
+.banner {
+	width:100%;
+	height:720px;
+	background:#FDF8F4;
+}
+.banner-nav {
+	width:1200px;
+	height:720px;
+	margin:0 auto;
+	background:#FDF8F4;
+}
+.banner-img {
+	width:772px;
+	height:720px;
+	float:left;
+}
+/*注册部分*/
+.banner-con {
+	float:right;
+	padding:20px;
+	height:530px;
+	width:310px;
+	background:#fff;
+	margin-top:100px;
+}
+.banner-form {
+	width:320px;
+	height:530px;
+}
+.banner-form p {
+	color:#666666;
+	width:60px;
+	height:40px;
+	float:left;
+	text-align:center;
+	line-height:40px;
+}
+.divall {
+	float:left;
+	width:240px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+}
+.inputall {
+	outline:none;
+	width:298px;
+	height:20px;
+	padding:10px 5px;
+	border:0;
+	border:1px solid #dedede;
+}
+.form-span1 {
+	margin-bottom:10px;
+	width:100px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	float:left;
+}
+.inp_span1 {
+	position:relative;
+	top:3px;
+}
+/*验证码*/
+.F4input {
+	margin-top:15px;
+	margin-bottom:10px;
+	outline:none;
+	width:150px;
+	height:20px;
+	padding:10px 5px;
+	border:0;
+	border:1px solid #dedede;
+}
+#idcode {
+	width:80px;
+	height:45px;
+	display:inline-block;
+	position:relative;
+	left:-11px;
+	left:0;
+}
+.input_btn {
+	width:310px;
+	height:50px;
+	background:#F19108;
+	border:0;
+	outline:none;
+	color:#fff;
+	font-weight:bold;
+	font-size:16px}
+.form-span2 {
+	display:block;
+	height:40px;
+	line-height:40px;
+	padding:0 10px;
+}
+.inp_span2 {
+	position:relative;
+	top:3px;
+}
+.form-span3 {
+	display:block;
+	height:40px;
+	line-height:40px;
+	padding-top:20px;
+}
+.form-span3 a {
+	color:#F19108;
+	padding-left:5px;
+}
+/*底部*/
+.map {
+	width:1200px;
+	height:224px;
+	margin:0 auto;
+	padding-top:20px;
+}
+.map ul {
+	width:892px;
+	height:184px;
+	padding:20px 0;
+	float:left;
+}
+.map ul li {
+	float:left;
+	width:170px;
+	height:24px;
+}
+.map ul li:last-child {
+	width:200px;
+}
+.map ul li a:hover {
+	color:#4d4286;
+}
+.map ul li a {
+	padding:5px 0;
+	display:block;
+	text-align:center;
+}
+.map ul li a:first-child {
+	padding-bottom:10px;
+	padding-top:0;
+	color:#000000;
+	font-family:"微软雅黑";
+	font-weight:bold;
+}
+.map ul li p {
+	color:#000000;
+}
+.foot-right {
+	float:right;
+}
+.foot-right a {
+	display:block;
+	padding-right:20px;
+	float:left;
+	text-align:center;
+}
+.foot-right a:last-child {
+	padding-right:0;
+}
+.foot-top {
+	width:100%;
+	height:15px;
+	padding:20px 0;
+	background:#463B7F;
+}
+.foot-img {
+	width:1200px;
+	height:15px;
+	margin:0 auto;
+	background:url(../bottomImg/btbg.jpg) no-repeat center;
+}
+.foot-left {
+	width:1200px;
+	height:204px;
+	margin:30px auto;
+}
+.foot-left p {
+	padding-bottom:14px;
+	text-align:center;
+}
+.foot-left p:last-child {
+	height:47px;
+	padding:20px 0;
+}
+.foot-left p a {
+	padding-right:10px;
+}
+.foot-left p a img {
+	padding-right:10px;
+	display:inline-block;
+}
+.form-diva {
+	color:#FF0000;
+}
+.success {
+	color:yellowgreen;
+}

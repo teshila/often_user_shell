@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#wrap-header { } /* 重点说明，外围一定不要加宽度，默认width:100%;*/
+#wrap-banner { height:358px; background:url(../images/banner.gif) no-repeat center top;}
+#wrap-gg { }
+#wrap-content {  background:#d6dae2;}
+#wrap-footerlink { background:url(../images/footerlink.gif) repeat-x #f6f6f6; }
+#wrap-footer {  background:#bababa; padding:26px 0 28px 0;}
+
+
+.gg { position:relative;}
+.gg p {  height:37px; line-height:37px; background:url(../images/laba.gif) no-repeat left center; text-indent:30px;}
+.gg img { position:absolute; left:50%; margin-left:-20px; bottom:0; cursor:pointer;}
+
+
+.content { padding-top:20px;}
+
+/* ----------------content公共区域--------------------------  */
+.con-padding { padding:20px;}
+.padd-b-55 { padding-bottom:55px;}
+.padd-t-17 { padding-top:17px;}
+.padd-t-15 { padding-top:15px;}
+.left-content { background:#f2f1ef;}
+.content h3 { position:relative; _zoom:1; /* 触发ie6 让haslayout变为true，就相当于ie6下有一个layout(布局)*/ 
+			  background:url(../images/h3-1.gif) no-repeat; text-indent:30px; margin-bottom:20px;}
+.content h3.h3-2 { background-image:url(../images/h3-2.gif);} 
+.content h3.h3-3 { background-image:url(../images/h3-3.gif);} 
+.content h3.h3-4 { background-image:url(../images/h3-4.gif);} 
+.content h3.h3-5 { background-image:url(../images/h3-5.gif); margin-bottom:19px;} 
+.content h3 span { display:block; vertical-align:top;}
+.content h3 span a {display:block; font-size:20px; height:20px; line-height:20px;  /*line-height:20px; 覆盖该元素的默认行高 line-height:normal*/}
+.content h3 em { position:absolute; right:0; bottom:0;}
+.content h3 em a { display:block; font-size:12px; color:#888;}
+/* ----------------content公共区域--------------------------  */
+
+
+.content-left { width:780px;}
+.left-1-dl { }
+.left-1-dl dl { float:left; width:226px; margin-right:31px;}
+.left-1-dl dl.last { margin-right:0;}
+.left-1-dl dl dd {  padding:11px 17px 12px 11px; background:#fff; border-top:3px solid #1fc0ef;}
+.left-1-dl dl.dl-2 dd { border-color:#f6a544;}
+.left-1-dl dl.last dd { border-color:#8cbe00;}
+.left-1-dl dl dd h4 { font-size:12px; height:26px; line-height:26px;}
+.left-1-dl dl dd h4 a { display:block; width:191px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.left-1-dl dl dd p { line-height:20px; text-align:justify; text-justify:inter-ideograph; /*兼容ie的两端对齐*/}
+
+.left-2 { margin-top:20px;}
+.left-2-dl dl { overflow:hidden; *zoom:1; /* zoom1 兼容ie7低版本的清除浮动问题*/ background:url(../images/dl-bg.gif) no-repeat right top #fff; 
+			    padding:20px; margin-bottom:20px; border-radius:2px;} 
+.left-2-dl dl.dl-2 { background-image:url(../images/dl-2.gif);}
+.left-2-dl dl.dl-3 { margin-bottom:0; background-image:url(../images/dl-3.gif);}
+.left-2-dl dl dt { float:left; width:86px; height:86px; background-color:#006265; background-image:-webkit-linear-gradient(top,#002d3c ,#005c60);
+				   background-image:-moz-linear-gradient(top,#002d3c,#005c60); background-image:-ms-linear-gradient(top,#002d3c,#005c60);
+				   color:#fff; position:relative; text-transform:capitalize;}
+.left-2-dl dl dt span { font-size:12px; position:absolute; top:15px; width:166%; text-align:center; transform:scale(0.6); transform-origin:left;
+						*width:100%; *font-size:8px;}
+.left-2-dl dl dt em { font-size:12px;  position:absolute; top:38px; width:166%; text-align:center; transform:scale(0.6); transform-origin:left;
+					    *width:100%; *font-size:8px;}
+
+.left-2-dl dl dd { float:left; text-transform:capitalize; margin-left:20px; width:490px;}
+.left-2-dl dl dd h4 { padding-top:1px; font-size:16px; /*line-height:normal; 默认行高造成多了2px*/ height:16px; line-height:16px;}
+.left-2-dl dl dd em { display:block; font-size:12px; color:#888; background:url(../images/time.gif) no-repeat; height:12px; line-height:12px;
+					  text-indent:17px; margin:10px 0 6px 0;}
+.left-2-dl dl dd p { line-height:22px;}
+
+.left-3 { margin-top:20px;}
+.left-3 dl { overflow:hidden; *zoom:1; border-bottom:1px solid #e4e3e2; padding-bottom:20px; margin-bottom:20px;}
+.left-3 dl.last { margin-bottom:0;}
+.left-3 dl dt { float:left; margin-right:20px;}
+.left-3 dl dd { float:left; width:463px;}
+.left-3-dl dl dd h4 {padding-top:1px; font-size:16px; /*line-height:normal; 默认行高造成多了2px*/ height:16px; line-height:16px;}
+.left-3-dl dl dd em { display:block; font-size:12px; color:#888; background:url(../images/time.gif) no-repeat; height:12px; line-height:12px;
+					  text-indent:17px; margin:10px 0 29px 0;}
+.left-3-dl dl dd p { line-height:24px;}
+
+
+
+.content-right { width:266px; min-height:1597px; height:auto!important; height:1597px; background:#fcfafa}
+.right-1 { border-bottom:1px solid #e4e3e2; }
+.right-1 .nav-ul ul { background:url(../images/ul-bg.gif) no-repeat left bottom; padding-left:2px; padding-bottom:2px;}
+.right-1 .nav-ul li { float:left; width:110px; height:30px; line-height:30px; text-align:center;
+				  border-bottom:1px solid #ccc; color:#919191; cursor:pointer;}
+.right-1 ul li.active { border:1px solid #ccc; border-bottom:0; color:#000;}
+.right-1 .right-1-content .ul-1 { padding:15px 0;}
+.right-1 .content-1 .ul-1 li { position:relative; width:226px; height:160px; margin-bottom:20px; *margin-bottom:18px;}
+.right-1 .content-1 .ul-1 li.last { margin-bottom:0; *margin-bottom:-2px; /* 解决ie7以下的bug */}
+.right-1 .content-1 .ul-1 li .tm { position:absolute; left:0; bottom:0; background:#000; height:26px; width:100%; 
+								opacity:0.5; filter:alpha(opacity:50);}
+.right-1 .content-1 .ul-1 li .tm-content { position:absolute; left:0; bottom:0; height:26px; width:100%;}
+.right-1 .content-1 .ul-1 li .tm-content span{ float:left; width:20px; height:26px; background:#e2291c; color:#fff; text-align:center;
+											line-height:26px;}
+.right-1 .content-1 .ul-1 li .tm-content p { float:left;}
+.right-1 .content-1 .ul-1 li .tm-content p a { color:#fff; display:block; width:178px; height:26px; line-height:26px; 
+											overflow:hidden; white-space:nowrap; text-overflow:ellipsis; margin-left:10px;}
+
+.right-1 .right-1-content .ul-2 {}
+.right-1 .right-1-content .ul-2 li { overflow:hidden; *zoom:1; line-height:20px; margin-bottom:10px; }
+.right-1 .right-1-content .ul-2 li.last { margin-bottom:0;}
+.right-1 .right-1-content .ul-2 li em { float:left; width:18px; height:20px; text-align:center; color:#fff; background:url(../images/icon-rank-item.png); }
+.right-1 .right-1-content .ul-2 li span { float:left; padding-left:10px; height:20px; }
+.right-1 .right-1-content .ul-2 li span a{ display:block; width:192px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+
+.right-2 { border-bottom:1px solid #e4e3e2; } 
+.right-2 h4 { padding-top:3px;}
+.right-2 h4 a {display:block; font-size:20px; height:41px; line-height:41px;}
+.right-2 p,.right-3 p { line-height:2em;}
+
+.footerlink { padding:39px 0 64px 8px;}
+.footerlink h4 { font-size:12px; height:12px; line-height:12px; text-indent:12px;}
+
+
+.footerlink .link-left { width:780px; }
+.footerlink .link-left ul { padding-top:4px;}
+.footerlink .link-left ul li { float:left; width:127px; height:48px; text-align:center; /*border:1px solid red;*/}
+.footerlink .link-left ul li a { display:inline-block; vertical-align:middle;} 
+.footerlink .link-left ul li em { display:inline-block; height:100%; width:0; vertical-align:middle;}
+/* 2个inline元素 基线居中 */
+
+.footerlink .link-left ul li.more { text-align:left;}
+.footerlink .link-left ul li.more a { margin-left:23px;}
+
+.list-a { padding-left:25px;}
+.list-a a { float:left; margin-right:35px; margin-top:15px;}
+
+.footerlink .link-right { width:248px;}
+.link-right p { height:58px; line-height:58px; background:url(../images/p-1.gif) no-repeat 18px center; text-indent:37px;}
+.link-right p.p-2 { background-image:url(../images/p-2.gif); background-position:16px center; text-indent:39px;}
+#wrap-footer p { line-height:2em; text-align:center;}

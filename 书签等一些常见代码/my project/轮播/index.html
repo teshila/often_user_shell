@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>标题</title>
+	<style type="text/css">
+		* {margin:0;padding:0;}
+		body{
+			background: url(images/bg.jpg);
+		}
+		ul,li {
+			list-style: none;
+		}
+		#box {
+			width: 900px;
+			height: 300px;
+			margin: 200px auto;
+			position: relative;
+		}
+		#list li {
+			position: absolute;
+            opacity: 0;
+            transition: all .8s ease;
+		}
+		#list li.curr{
+            opacity: 1;
+		}
+		#count {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			z-index: 20;
+		}
+		#count li{
+			background: rgba(255,255,255,0.5);
+			float: left;
+			margin-left: 10px;
+			width: 40px;
+			line-height: 40px;
+			text-align: center;
+			border-radius: 50%;
+			transition: all 1s ease;
+        }
+        #count li.none{
+            background: red;
+        }
+
+        /* start button*/
+        a{
+            position: absolute;
+            top: 25%;
+            z-index: 30;
+            text-decoration: none;
+            padding: 2em 1em;
+            background: rgba(1,1,1,0.5);
+            font-size: 30px;
+            color: #fff;
+            font-weight: 700;
+            opacity: 0;
+		}
+		#box:hover a{
+			opacity: 1;
+		}
+		#prev{
+			left: 30px;
+		}
+		#next{
+			right: 30px;
+		}
+	</style>
+</head>
+<body>
+    <div id="box">
+		<a href="javascript:void(0);" id="prev">&lt;</a>
+		<a href="javascript:void(0);" id="next">&gt;</a>
+		<ul id="list">
+			<li  class="curr"><img src="images/1.jpg" width="100%"></li>
+			<li><img src="images/2.jpg" width="100%"></li>
+			<li><img src="images/3.jpg" width="100%"></li>
+			<li><img src="images/4.jpg" width="100%"></li>
+			<li><img src="images/5.jpg" width="100%"></li>
+		</ul>
+		<ul id="count">
+			<li class="none">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+    </div>
+
+	<script>
+		function $(id){
+			return document.getElementById(id);
+		};
+		var index = 0;
+		// 定义一个空的定时器变量
+		var  timer = null;
+		var prev = $("prev");
+		var next = $("next");
+		var  boxDom = $("box");
+
+		var uls = document.getElementsByTagName("ul");
+		var imgs = uls[0].getElementsByTagName("li");
+		var btns = uls[1].getElementsByTagName("li");
+
+		// 遍历获取下标
+		for (var i = 0; i<btns.length ; i++ ){
+			btns[i].index = i;
+			//鼠标放在li 上的时候触发效果
+			btns[i].onmouseover = function(){
+				show(this.index);  //把 拿到的下标传递给 show 方法
+			}
+		}
+		//淡入淡出
+		function show(a){
+			for (var i = 0; i<btns.length ; i++ ){
+
+                // 按钮切换效果
+                // 先把所有的类样式干掉
+                btns[i].className="";
+                // 通过下标添加类样式
+                btns[a].className="none";
+
+                // 图片切换放大缩小效果
+                imgs[i].style.opacity = "0";
+                imgs[a].style.opacity = "1";
+                imgs[i].style.transform = "scale(0)";
+                imgs[a].style.transform = "scale(1)";
+			}
+		}
+
+		//下一页
+		next.onmousedown = function(){
+			index++;
+			if (index>=imgs.length){
+				index = 0;     // 跳到第一张
+				show(index);
+			}else{
+				show(index);
+			}
+		};
+		//上一页
+		prev.onmousedown = function(){
+			index--;
+			if (index<0){
+				index = imgs.length-1;   //跳到最后一张
+				show(index);
+			}else{
+				show(index);
+			}
+		};
+		console.log(index);
+
+		//自动播放
+		function autoPlay(){
+			timer = setInterval(function(){
+				index++;
+				console.log(index);
+				//边界判断
+				if (index>=imgs.length){
+					index = 0;
+					show(index);
+				}else{
+					show(index);
+				}
+			},3000);
+		};
+		autoPlay();
+		// 鼠标放上去的时候
+		boxDom.onmouseover = function(){
+			//清除定时器
+			clearInterval(timer);
+		}
+		// 鼠标移开的时候
+		boxDom.onmouseout = function(){
+			//执行定时器
+			autoPlay();
+		}
+	</script>
+</body>
+</html>

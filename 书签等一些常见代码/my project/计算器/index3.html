@@ -1,0 +1,228 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-size:12px;
+            font-family:Arial,Georgia,"Times New Roman",Times,serif;
+            color:#555;
+            text-align:center;
+            background-color:#e2e2e2;
+        }
+        ul,li {
+            list-style: none;
+        }
+        h6 {
+            font-size:20px;
+            text-align: center;
+        }
+        .clearfix {
+            zoom: 0;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+        }
+        .calculator {
+            width:94%;
+            margin:50px auto;
+            background-color:#f2f2f2;
+            box-shadow: 0 0 20px pink;
+            border-radius: 10px;
+            padding-bottom: 4px;
+        }
+
+        .calculator ul {
+            margin:5px 14px;
+        }
+        .calculator li {
+            float:left;
+            width:14.43%;
+            margin:0.5%;
+            line-height:32px;
+            font-size:32px;
+            background-color:#eaeaea;
+            padding:2.28%;
+        }
+        .calculator li.tool {
+            background-color:#738FD8;
+        }
+        .calculator li.D06A15 {
+            background-color:#D06A15;
+        }
+        .calculator li:hover {
+            background-color:#f9f9f9;
+            cursor:pointer;
+        }
+        .calculator li:active {
+            background-color:#fc0;
+            cursor:pointer;
+        }
+        .calculator li.tool:active {
+            background-color:#d8e8ff;
+            cursor:pointer;
+        }
+        .calcu-head {
+            padding:10px 15px 5px;
+        }
+        .screen {
+            width:97%;
+            height:42px;
+            line-height:42px;
+            padding:4px;
+            border:#e6e6e6 1px solid;
+            border-bottom:#f2f2f2 1px solid;
+            border-right:#f2f2f2 1px solid;
+            margin:10px auto;
+            direction:ltr;
+            text-align:right;
+            font-size:3em;
+            color:#999;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator" class="calculator">
+        <form>
+            <div id="calcu-head" class="calcu-head">
+                <h6>计算器</h6>
+            </div>
+            <div id="calcu-screen">
+            <!--配置显示窗口，使用onfocus="this.blur();"避免键盘输入-->
+            <input type="text" name="numScreen" id="result" class="screen" value="0" onfocus="this.blur();" />
+            </div>
+            <div id="calcu-btn">
+                <ul class="clearfix"> <!--配置按钮-->
+                    <li onclick="command(7)">7</li>
+                    <li onclick="command(8)">8</li>
+                    <li onclick="command(9)">9</li>
+                    <li class="tool" onclick="del('j')">←</li>
+                    <li class="tool" onclick="clearzero('j')">C</li>
+                    <li onclick="command(4)">4</li>
+                    <li onclick="command(5)">5</li>
+                    <li onclick="command(6)">6</li>
+                    <li class="tool" onclick="op('*','g')">×</li>
+                    <li class="tool" onclick="op('/','g')">÷</li>
+                    <li onclick="command(1)">1</li>
+                    <li onclick="command(2)">2</li>
+                    <li onclick="command(3)">3</li>
+                    <li class="tool" onclick="op('+','g')">+</li>
+                    <li class="tool" onclick="op('-','g')">-</li>
+                    <li onclick="command(0)">0</li>
+                    <li onclick="dzero('g')">00</li>
+                    <li onclick="dot('g')">.</li>
+                    <li class="tool" onclick="op('%','g')">%</li>
+                    <li class="tool D06A15" onclick="equal('j')">=</li>
+                </ul>
+            </div>
+            <div id="audioBox">
+                <embed id="devUnknown"  src="audio/0.wav"   width="0"   height="0"   loop="false"   autostart="false"/>
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        //抓住eval用于运算的能力通过还还用执行方法的能力以及数据类型转换的能力
+        //结果框对象
+        var resultDom = document.getElementById("result");
+        //小数点锁
+        var dotFlag = true;
+        //操作符的锁
+        var opFlag = true;
+        function command(num){
+            //先取到文本框的值 0
+            var str = resultDom.value;
+            str = (str =="0"? "":str);
+            resultDom.value = str + num;
+            opFlag = true;//打开操作符锁
+            play(num);//
+
+        };
+
+        //点击操作符(运算符)
+        function op(op){
+            if(opFlag){
+                resultDom.value +=op;
+                dotFlag = true;//打开小数点锁
+                play("j");
+                opFlag = false;
+            }
+        };
+
+        //运算
+        function equal(){
+            //拿到最新的文本框的值，也就最后用户输入操作符之后的值
+            var num = resultDom.value;
+            //讲计算的值放入到结构框中
+            resultDom.value = eval(num);
+            var r = resultDom.value;
+            dotFlag = (r.indexOf(".")==-1?true:false);
+            play("r");
+            opFlag = true;
+        };
+
+        //双0
+        function dzero(){
+            var num = resultDom.value;//获取文本框的值
+            if(num=="0"){
+                return;//如果等返回000
+            }
+            var str = resultDom.value;
+            resultDom.value = str + "00";
+            play("j");
+        };
+
+        //小数
+        function dot(){
+            if(dotFlag){
+                //首先拿到文本框的值
+                var num = resultDom.value;
+                //拼接一个小数点
+                resultDom.value = num+".";
+                dotFlag = false;//锁住小数点
+            }
+            play("j");
+        };
+
+        //清零
+        function clearzero(){
+            resultDom.value = "0";
+            //opFlag 记录操作符
+            opFlag = true;
+            //小数点锁
+            dotFlag = true;
+            play("r");
+        };
+
+        //退格
+        function del(){
+            var val = resultDom.value;
+            if(!val){return;}
+            var str = val.substring(0,val.length-1);//7878.
+            if(str && /[\.|\+|\-|\*|\/|\%]$/.test(str)){
+                resultDom.value = str.replace(/[\.|\+|\-|\*|\/|\%]$/,"")||0;
+                dotFlag = true;//小数点锁打开
+            }else{
+                resultDom.value = str||0;
+            }
+            play("r");
+        };
+
+        //播放音乐
+        function play(m){
+            document.getElementById("audioBox").innerHTML = "<embed src='audio/"+m+".wav' width='0' height='0'/>";
+        }
+    </script>
+</body>
+</html>

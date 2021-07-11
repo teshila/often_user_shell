@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.header,.gg,.content,.footerlink,.footer { width:1066px; margin:0 auto;}
+.header {  }
+.logo { } 
+.logo h1 { padding-top:16px;}
+.logo h1 a { display:block; width:309px; height:46px; background:url(../images/logo.jpg); text-indent:-9999px;} 
+.nav { margin-left:70px; }
+.nav ul {}
+.nav ul li { float:left;}
+.nav ul li a { display:block; width:98px; height:78px; background:url(../images/nav-bg.png) no-repeat; text-indent:-9999px;}
+.nav ul li.li-2 a { width:122px; background-position:-100px 0;}
+.nav ul li.li-3 a { width:144px; background-position:-224px 0;}
+.nav ul li.li-4 a { width:118px; background-position:-370px 0;}
+.nav ul li a:hover { background-position:0 -78px;}
+.nav ul li.li-2 a:hover { background-position:-100px -78px;}
+.nav ul li.li-3 a:hover { background-position:-224px -78px;}
+.nav ul li.li-4 a:hover { background-position:-370px -78px;}
+.w-search { padding-top:16px; color:#cdb6a1;}
+.w-search a { color:#a1968c;}
+.registered { word-spacing:6px; text-align:right;}
+.registered {}
+.search { margin-top:8px; border:1px solid #cdb6a1; width:139px; border-radius:2px;}
+.search input { float:left; border:0;}
+.search input.txt { width:117px; height:22px; line-height:22px;}
+.search input.sub { width:22px; height:22px; background:url(../images/submit.gif) no-repeat left center;
+					cursor:pointer;}
+
+
+

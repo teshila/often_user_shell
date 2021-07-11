@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<link rel="stylesheet" href="ionic/css/ionic.min.css" />
+		<link rel="stylesheet" href="css/jianshu.css" />
+	</head>
+
+	<body ng-app="app">
+
+		<ion-nav-view></ion-nav-view>
+
+		<script src="ionic/js/ionic.bundle.min.js"></script>
+		<script src="js/app.js"></script>
+		<script type="text/ng-template" id="index.html">
+			<ion-header-bar class="bar-assertive">
+				<img class="logo" src="http://cdn-qn0.jianshu.io/assets/mobile/new-logo-43f2e11f34b87e870ae06b7ca3a1cbdc.png" />
+				<h2 class="jianshu-title">你也能写这样的图文</h2>
+				<button class="button button-light">
+				  免费下载
+				</button>
+			</ion-header-bar>
+			<ion-content class="has-header has-footer">
+				<img class="img-phone" src="http://cdn-qn0.jianshu.io/assets/mobile/index_phone-e47b04f8b57ad885770ec579c4341259.png" alt="">
+				<ul class="listData">
+					<li>随时随地发现和创作内容</li>
+					<li>每天为你精选好文</li>
+					<li>第一时间收到作者文章更新</li>
+				</ul>
+
+				<h3 class="text-title">文章</h3>
+
+				<ul class="list">
+
+					<li class="item item-thumbnail-right" ng-repeat="item in list">
+						<img ng-src="{{item.list_image_url}}">
+						<h2>{{item.title}}</h2>
+						<p>{{ item.first_shared_at | date: 'yyyy年MM月dd日'}}</p>
+					</li>
+
+					</li>
+				</ul>
+
+				<button class="button button-block button-clear open" ng-click="click()">展开更多文章</button>
+				<button class="button button-block button-clear open" ng-click="login()">登录</button>
+			</ion-content>
+
+		</script>
+		<script type="text/ng-template" id="login.html">
+             <ion-header-bar class="bar-assertive">
+             	<h2 class="title">简书登录</h2>
+             </ion-header-bar>
+             <ion-content>
+             	<from name="loginForm">
+             		<div class="list list-inset">
+					  <label class="item item-input">
+					  	 <i class="icon ion-ios-person placeholder-icon"></i>
+					    <input type="text" placeholder="手机或邮箱" required name="username" ng-model="name">
+					  </label>
+					  <label class="item item-input">
+					  	 <i class="icon ion-ios-locked placeholder-icon"></i>
+					    <input type="password" placeholder="密码" required name="pwd" ng-model="pwd">
+					  </label>
+					  <label class="item item-input item-button-right">
+					  	 <i class="icon ion-ios-filing placeholder-icon"></i>
+					    <input type="text" placeholder="请输入图片中的文字" required name="yzm" ng-model="yazm">					    
+					      <img ng-src="{{user.getCode.image}}" alt=""  ng-click="refreash()">					   
+					  </label>
+					  <button class="button button-full button-positive" disabled="loginFrom.$invilid">提交</button>
+					</div>
+             	</from>
+             </ion-content>
+		</script>
+	</body>
+
+</html>

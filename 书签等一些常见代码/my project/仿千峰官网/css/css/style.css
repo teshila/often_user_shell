@@ -1,0 +1,71 @@
+@charset "UTF-8";
+*{margin:0;padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none;color:black;}
+body{margin:0 0 0 35px;}
+/*bottom*/
+#top{width:999px;height:100px;}
+.topL{width:732px;height:59px;float:left;padding:41px 0 0 21px}
+.topR{width:246px;height:100px;float:left;}
+
+#top form{width:246px;height:61px;float:left;padding-top:39px;}
+#top form .Input{width:195px;height:26px;border:1px solid #e5e5e5;background:#f1f1f1;color:#878787;border-right:0;float:left;}
+#top form .Serch{width:30px;height:28px;border:1px solid #e5e5e5;background:#f1f1f1 url(../images/search.jpg) no-repeat center;border-left:0;float:left;}
+#banner{width:999px;height:523px;background:#ccc;}
+.banner-box{width:999px;height:59px; text-align:center;background:#303030}
+.banner-box li{width:119px;height:59px;float:left;text-align:center;line-height:59px;display:  block;border-right:1px solid #494949;}
+.banner-box li:first-child{width:146px;}
+.banner-box li:last-child{border-right:0 solid #494949;}
+.banner-box li a{font-size:14px;color:white;}
+.banner-pic{width:999px;height:463px;}
+
+#news{width:999px;height:271px;background:#ccc;background:white;}
+.newsL{width:499px;height:270px;float:left;}
+.newsL h2{font-size:18px;color:#4d4d4d;margin:37px 0 0 20px;font-weight:100;}
+.newsL ul{width:456px;height:165px;margin:29px 0 0 20px;display:block;}
+.newsL ul li{line-height:23px;width:456px}
+.newsL ul li a{width:311px;font-size:12px;color:#545454;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;}
+.newsL ul li span{font-size:12px;color:#b5b5b5;float:right;display:inline-block;}
+.newsM{width:241px;height:242px;background:#f1f1f1;float:left;}
+.newsM h2{font-size:18px;color:#4d4d4d;margin:38px 0 0 25px;font-weight:100;}
+.newsM .Lishi{width:160px;height:52px;margin:36px 0 0 25px;}
+.newsM h3{font-size:12px;color:#4b4b4b;line-height:30px;font-weight:100;}
+.newsM .Jieshao{width:191px;height:39px;margin:20px 0 0 25px;}
+.newsM .Jieshao p{font-size:12px;color:#8e8e8e;line-height:24px;}
+
+.newsR{width:259px;height:257px;float:left;}
+.newsR h2{font-size:18px;color:#4d4d4d;margin:38px 0 0 25px;font-weight:100;}
+.newsR .Rencai{width:160px;height:52px;margin:30px 0 0 25px;}
+.newsR h3{font-size:12px;color:#5d5d5d;line-height:30px;font-weight:100;}
+.newsR-pic{float:right;margin-right:10px;}
+.newsR-pic1{float:left;margin:50px 0 0 25px;}
+
+#market{width:999px;height:275px;background:red;}
+ h2{font-size:18px;color:#4d4d4d;margin-left:25px;}
+.marketbox{width:960px;height:189px;margin:18px 0 0 27px;}
+.marketbox .nav{width:210px;height:192px;float:left;margin-right:40px;display:block;}
+.marketbox .nav:last-child{margin-right:0}
+.nav .pic{width:208px;height:136px}
+.nav p{margin-top:5px;font-size:12px;color:#8e8e8e;line-height:24px;}
+
+#product{width:999px;height:250px;background:#e5e5e5;}
+.productL{width:451px;height:245px;margin-left:20px;float:left; }
+ h4{margin-top:20px; font-size:16px;color:#606060;line-height:28px;font-weight:100;border-bottom:1px solid #606060}
+.productL .list1{width:149px;height:129px;padding-top:8px;float:left;}
+.productL li{background:url(../images/biaozhi-1.jpg) no-repeat center left;}
+.productL li a{margin-left:14px;font-size:12px;color:#616161;line-height:24px;}
+.productL .list2{width:194px;height:129px;padding-top:8px;float:left;}
+.productL .list3{width:106px;height:129px;padding-top:8px;float:left;}
+.productM {width:152px;height:247px;margin:0 49px 0 47px;float:left;}
+.productM li{background:url(../images/biaozhi-1.jpg) no-repeat center left;}
+.productM li:first-child{margin-top:8px;}
+.productM li a{margin-left:14px;font-size:12px;color:#616161;line-height:24px;}
+.productR{width:256px;height:247px;float:left;}
+.productR-pic{margin-top:16px;margin-left:30px;width:192px;height:148px;}
+#bottom{width:999px;height:81px;}
+.bottomL{margin-left:8px;width:400px;height:35px;   float:left;}
+.bottomL .pi{font-size:12px;color:#9f9f9f;line-height:35px;text-align:left;}
+.bottomR{margin-right:8px;width:500px;height:35px;float:right;}
+.bottomR .pi{font-size:12px;color:#9f9f9f;line-height:35px;text-align:right;}
+
+

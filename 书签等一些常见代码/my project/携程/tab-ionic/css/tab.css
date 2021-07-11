@@ -1,0 +1,156 @@
+.tabs-striped.tabs-light .tabs{
+	background: #f7f7f7;
+
+}
+.slider-slide img{
+	width: 100%;
+	height: 100%;
+}
+
+.main{
+	padding: 10px 0 0 10px;
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+}
+
+.main .list1{
+	display: flex;
+	height: 145px;
+}
+
+.list1 li,.list2 li,.list3 li,.data li{
+	flex: 1;
+	margin-right: 10px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	background: #fff;
+	font-size: 14px;
+	color: #fff;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.list1 li .icon,.list2 li .icon,.list3 li .icon,.data li .icon{
+	font-size:30px;
+	margin-top: 10px;
+}
+.myC .icon{
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.list1 li:nth-child(1){
+            background: #896aeb;
+        }
+.list1 li:nth-child(2){
+            background: #10c1f3;
+        }        
+.list2{
+	margin: 10px 0;
+	display: flex;
+	height: 72px;
+}
+
+.list2 li.first{
+            background: #387ef5;
+        }
+.data{
+	display:flex;
+	height: 100%;
+	width: 100%;
+}
+
+.data li:nth-child(1){
+            background: #ef463a;
+        }
+.data li:last-child{
+            background: #10c1f3;
+            margin-right: 0;
+        }
+
+.list3{
+	display: flex;
+	height: 72px;
+}
+
+.list3 li:nth-child(1){
+            background: #32cd5e;
+        }
+.list3 li:nth-child(2){
+            background: #ffc900;
+        }
+.list3 li:nth-child(3){
+            background: #896aeb;
+        }
+.tab-item.activated, .tab-item.active, .tab-item.tab-item-active{
+	color: #11C1F3;
+}        
+.badge {
+	background: rgba(17, 193, 243,.5)!important;
+}
+
+
+/*设置*/
+.login{
+	height:123px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	color: #666;
+}
+.login span{
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: url(../img/pic.png) no-repeat center;
+	margin-bottom: 22px;
+}
+.list4{
+	height: 51px;
+	box-sizing: border-box;
+	border-top:2px solid #ddd;
+	border-bottom:2px solid #ddd;
+	display: flex;
+}
+.list4 li{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-left: 1px solid #ddd;
+	color: #444;
+}
+.list4 li .icon{
+	margin-right: 5px;
+	font-size: 26px;
+}
+/*新闻*/
+.navlist{
+	height: 40px;
+	width: 100%;
+	border-bottom: 1px solid #f1f1f1;
+	display: flex;
+	white-space: nowrap;
+}
+.navlist li{
+	font-size: 16px;
+	color: #666;
+	margin-right: 10px;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid #f1f1f1;
+}
+.navlist li:hover{
+	border-bottom: 2px solid #387ef5;
+}
+.scroll .ng-binding img{
+	width: 100%;
+}
+
+
+

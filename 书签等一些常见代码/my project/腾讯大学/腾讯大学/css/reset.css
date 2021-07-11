@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* * { margin:0; padding:0; }  耗资源，影响性能，代码越多影响越大 */
+/** 清除内外边距 **/
+body,hr, p, blockquote,h1,h2,h3,h4,h5,h6, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+}
+body { font:12px "宋体";} 
+a { text-decoration:none; color:#000;}
+.fl { float:left;}
+.fr { float:right;}
+ul,li { list-style:none;}
+em { font-style:normal;}
+img { display:block; border:0;}
+.clear { *zoom:1;}
+.clear:after { content:""; display:block; clear:both;}

@@ -1,0 +1,20 @@
+store是引入一个组件
+
+方式1的路由和vue实例化：
+new Vue({
+    router,
+    store,
+}).$mount('#app')
+
+
+
+
+方式2的路由和vue实例化：
+
+new Vue({
+  el: '#app',
+  store,
+  router,
+  template: '<App/>',//template可以不用写。vue-cli脚手架自动生成的
+  components: { App }
+})

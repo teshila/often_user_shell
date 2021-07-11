@@ -1,0 +1,97 @@
+[
+{
+    "id": 1,
+    "name": "主菜",
+    "icon": "img/icon1.png",
+    "items": [{
+        "id": 1,
+        "name": "三金耗儿鱼",
+        "price": 318.00,
+        "unit": "锅",
+        "pic": "img/banner.png"
+    }, {
+        "id": 2,
+        "name": "好大一条鱼",
+        "price": 128.00,
+        "unit": "条",
+        "pic": "http://i02.pic.sogou.com/a39924232a415ea8"
+    }
+    ]
+},
+{
+    "id": 2,
+    "name": "热菜",
+    "icon":  "img/icon2.png",
+    "items": [{
+        "id": 5,
+        "name": "松子玉米",
+        "price": 20.00,
+        "unit": "盘",
+        "pic": "http://i04.pictn.sogoucdn.com/72b720efd30f8952"
+    }, {
+        "id": 6,
+        "name": "鸡翅",
+        "price": 60.00,
+        "unit": "盘",
+        "pic": "http://i03.pictn.sogoucdn.com/98590c7869a28b9e"
+    }]
+},
+{
+    "id": 3,
+    "name": "凉菜",
+    "icon":  "img/incon3.png",
+    "items": [{
+        "id": 7,
+        "name": "夫妻肺片",
+        "price": 50.00,
+        "unit": "盘",
+        "pic": "http://i01.pic.sogou.com/03d05b73f41fd18d"
+    }, {
+        "id": 8,
+        "name": "凤爪",
+        "price": 88.00,
+        "unit": "盘",
+        "pic": "http://i04.pic.sogou.com/12606dd9473c1d86"
+    }]
+},
+{
+    "id": 4,
+    "name": "汤品",
+    "icon":  "img/icon4.png",
+    "items": [{
+        "id": 9,
+        "name": "老鸭粉丝汤",
+        "price": 20.00,
+        "unit": "碗",
+        "pic": "http://i04.pic.sogou.com/ce2ec82cb9849e13"
+    }, {
+        "id": 10,
+        "name": "排骨汤",
+        "price": 69.00,
+        "unit": "碗",
+        "pic": "http://i02.pictn.sogoucdn.com/8308a48b7f7a3bbd"
+    }]
+},
+{
+    "id": 5,
+    "name": "点心",
+    "icon":  "img/icon5.png",
+    "items": [{
+        "id": 11,
+        "name": "肉松",
+        "price": 39.00,
+        "unit": "盘",
+        "pic": "http://i02.pic.sogou.com/cbff6fcdb1341cb0"
+    }, {
+        "id": 12,
+        "name": "点心",
+        "price": 110.00,
+        "unit": "份",
+        "pic": "http://i01.pic.sogou.com/808ef76cc5aa993f"
+    }]
+}
+
+
+
+
+]

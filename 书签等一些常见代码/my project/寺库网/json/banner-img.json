@@ -1,0 +1,36 @@
+{
+	"status":1,
+	"msg":"success",
+	"data":[
+				{
+					"id":1001,
+					"img_main":"img/banner-bag-main.jpg",
+					"img_small":"img/banner-bag.png"
+				},
+				{
+					"id":1002,
+					"img_main":"img/banner-gold-main.jpg",
+					"img_small":"img/banner-gold.png"
+				},
+				{
+					"id":1003,
+					"img_main":"img/banner-person-main.jpg",
+					"img_small":"img/banner-gold.png"
+				}
+	],
+	"bottom":[
+				{
+					"id":2003,
+					"img_bottom":"img/banner_bottom_1.jpg"
+				},
+				{
+					"id":2002,
+					"img_bottom":"img/banner_bottom_2.jpg"
+				},
+				{
+					"id":2001,
+					"img_bottom":"img/banner_bottom_3.jpg"
+				}
+	]
+	
+}

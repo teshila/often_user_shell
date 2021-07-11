@@ -1,0 +1,63 @@
+body,ul,li,img{
+    margin: 0px;
+    padding: 0px;
+}
+
+.carousel {
+	position: absolute;
+    width: 1920px;
+    height: 700px;
+    overflow: hidden;/*溢出隐藏*/
+}
+
+.carousel .img{
+	position: absolute;
+	width: 9600px;
+	height: 700px;
+	font-size:0;/*让img无缝连接*/
+	left: 0px;/*改变他实现轮播*/
+}
+
+.carousel .in{
+	position: absolute;
+	width: 1344px;
+	height: 700px;
+	font-size: 150px;/*字号*/
+	font-family:"Proxy 1";/*字体*/
+	z-index: 1;/*层级关系*/
+    left: 50%;/*居中*/
+    margin-left: -672px;/*居中*/
+    overflow: hidden;/*溢出隐藏*/
+}
+
+.carousel .in .left{
+	cursor: pointer;/*鼠标手势*/
+	position: absolute;
+	background-color: rgba(255,255,255,0.5);/*透明度*/
+	filter:alpha(opacity=40);/*透明度IE兼容*/
+	left:0px;
+	/*left:-91px;*//*默认让按钮不出现*/
+	top: 50%;/*垂直居中*/
+	margin-top: -91px;/*垂直居中*/
+	border-radius: 3px;/*圆角*/
+}
+
+.carousel .in .right{
+	cursor: pointer;/*鼠标手势*/
+	position: absolute;
+	background-color: rgba(255,255,255,0.5);/*透明度*/
+	filter:alpha(opacity=40);/*透明度IE兼容*/
+	right: 0px;
+	/*right: -90px;*//*默认让按钮不出现*/
+	top: 50%;/*垂直居中*/
+	margin-top: -91px;/*垂直居中*/
+	border-radius: 3px;/*圆角*/
+}
+
+.carousel .in .right:hover{
+	background-color: rgba(255,255,255,0.6);
+}
+
+.carousel .in .left:hover{
+	background-color: rgba(255,255,255,0.6);
+}

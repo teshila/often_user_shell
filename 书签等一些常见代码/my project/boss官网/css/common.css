@@ -1,0 +1,28 @@
+@charset "UTF-8";
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{margin:0;padding:0;}
+body{font-size:12px;color:#000;font-family:"微软雅黑";}
+ul,ol,li{list-style:none;}
+a{text-decoration:none;}
+img{border:0;display:block;}
+.clearfix:after{content:".";display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
+h1,h2,h3,h4,h5,h6{font-weight:100;font-size:16px;}
+em,i{font-style:normal;}
+b,strong{font-weight:100;}
+#top,#nav,#banner,#data,#gd,#bottom,#body{margin:0 auto;}
+.main-con{width:1171px;margin:0 auto;}
+#top{height:98px;border-top:1px solid #F0F0F1;border-bottom: 1px solid #F0F0F1;}
+.top-con h2{height: 54px;width:54px;margin-top: 22px;float: left;margin-right:20px;}
+.top-c{width:898px;height: 98px;float: left;}
+.top-r{width: 199px;height: 98px;float: left;}
+.top-c li{float: left;line-height: 98px;}
+.top-c li a {float: left;padding: 0 20px;font-size: 16px;color: #333;}
+.top-con a:hover{color:#53cac3 }
+.top-c ul .top-a a{color: #53cac3;}
+.top-r ul{margin-top:35px;}
+.top-r ul li{width: 99px;height: 21px;float: left; text-align: center;line-height: 21px;}
+.top-r1{background: url(../img/anzhuo_03.jpg) no-repeat 5px center;border-right:1px solid #E5E5E5;}
+.top-r2{background: url(../img/pingguo_03.jpg) no-repeat 5px center;}
+#bottom{background: #000;}
+.bottom-con {height: 233px;color: #fff;text-align: center;font-size: 12px;line-height: 26px;}
+.bottom-con .bo a{font-size: 18px;color: #fff;line-height: 18px;padding: 0 20px;}
+.bo{padding-top:66px;margin-bottom: 35px;}

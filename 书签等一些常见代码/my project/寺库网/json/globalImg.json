@@ -1,0 +1,65 @@
+{
+	"status":1,
+	"mag":"success",
+	"data_big":[
+				{
+					"id":1001,				
+					"global_big":"img/e43c97b3e6fc40089c42e49de5d03d69.jpg"
+				},
+				{
+					"id":1002,				
+					"global_big":"img/cc6641462d89405fb23de3baa4eea722.jpg"
+				}
+			],
+	"data_right":[
+					{
+						"id":2001,
+						"global_right":"img/ab176f9e9b1947eeb4cd58e619f3023d.jpg",
+						"count":"EONE季中折扣"
+							
+					},
+					{
+						"id":2002,
+						"global_right":"img/6b35b63a8d7c433abbb7f739fcfe0d18.jpg",
+						"count":"男装季中折扣"
+					},
+					{
+						"id":2003,
+						"global_right":"img/f4b039dfc65645e3a11b36caaede414d.jpg",
+						"count":"正官庄"
+					}
+				],
+	"data_bottom":[
+					{
+						"id":3001,
+						"global_bottom":"img/16976509.jpg",
+						"content":"【包邮包税】Yves saint Laurent/圣罗兰 女士深绿色牛皮单肩包",
+						"price":"16675"
+					},
+					{
+						"id":3002,
+						"global_bottom":"img/e302a3356e3940bd9265c27fc9813573.jpg",
+						"content":"GOLDEN GOOSE/GOLDEN",
+						"price":"1906"
+					
+					},
+					{
+						"id":3003,
+						"global_bottom":"img/14719064.jpg",
+						"content":"VENIMEUX Mini Bucket系列迷你流苏水桶包-藏蓝 ",
+						"price":"1582"
+					},
+					{
+						"id":3004,
+						"global_bottom":"img/14092865.jpg",
+						"content":"EONE Bradley Black 超轻钛金属表壳触感磁力腕",
+						"price":"2734"
+					},
+					{
+						"id":3005,
+						"global_bottom":"img/5427f18139894ae1a24490e9af7201f7.jpg",
+						"content":"Burlee Ugg Since 1974雪地靴 38码",
+						"price":"2051"
+					}
+				]
+}

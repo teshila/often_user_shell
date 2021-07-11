@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>智能交易股票管理系统</title>
+		<link rel="shortcut icon" href="https://cdn-img.easyicon.net/favicon.ico" />
+		<link rel="Bookmark" href="https://cdn-img.easyicon.net/favicon.ico" />
+		<meta name="description"
+					content="国内最智能的司马懿交易分析系统">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+		<style>
+			
+			/* 让模态框显示 */
+			 .modal {
+			  display: block;
+			}
+			
+			/* 如果不使用vue的transition的话可以不设置 */
+			.fade-enter-active, .fade-leave-active {
+			  transition: opacity .15s;
+			}
+			.fade-enter, .fade-leave-to {
+			  opacity: 0;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="app" class="container">
+			
+			<div class="panel panel-primary">
+			    <div class="panel-heading">
+			        <h3 class="panel-title">监控管理</h3>
+			    </div>
+			    <div class="panel-body">
+						<div class="container-fluid">
+							<div class="row clearfix">
+								<div class="col-md-12 column">
+									<form role="form" onsubmit="return false">
+										<div class="form-group">
+											 <label for="exampleInputEmail1">代码</label><input type="text" class="form-control" id="exampleInputEmail1" v-model="code" />
+										</div>
+										
+										<button type="submit" class="btn btn-primary" @click="addStock()">添加</button>
+									</form>
+								</div>
+							</div>
+						</div>
+						
+						
+				
+					
+			      <table class="table table-hover " style="margin-top: 0.25rem;">
+					  <thead>
+						  </thead>
+							<tr>
+								<th>代码</th>
+								<th>名称</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+			      	<tbody>
+						<tr v-for="item in list">
+			      		<td>{{item.code}}</td>
+			      		<td>{{item.name}}</td>
+						<td><button type="button" class="btn btn-primary" @click="del(item.code,item.name)">删除</button></td>
+			      	</tr>
+					</tbody>
+			      </table>
+				  
+				  
+				  <transition name="fade"><!-- transition不需要的话可以删掉 -->
+				     <div v-if="sample_modal">
+				       <div class="modal" v-on:click.self="sample_modal=false" style="top: 40%;">
+				         <div class="modal-dialog">
+				           <div class="modal-content">
+				             <div class="modal-header">
+				               <h4 class="modal-title">删除提示</h4>
+				               <button type="button" class="close" v-on:click="sample_modal=false">×</button>
+				             </div>
+				             <div class="modal-body">
+				               <p>是否删除代码: {{code}} ， 名称为 {{name}}  的股票信息</p>
+				             </div>
+				             <div class="modal-footer">
+				               <button type="button" class="btn btn-primary" @click="delStock($event)" v-bind:id="code">确定</button>
+							    <button type="button" class="btn btn-warning" v-on:click="sample_modal=false">取消</button>
+				             </div>
+				           </div>
+				         </div>
+				       </div>
+				       <div class="modal-backdrop show"></div>
+				     </div>
+				   </transition>
+			    </div>
+			</div>
+			
+			 
+			
+		</div>
+		<script>
+			
+			var demo = new Vue({
+			    // DOM 元素，挂载视图模型
+			   el:"#app",
+			    // 定义属性，并设置初始值
+			    data:{
+			        list: [],
+					code:"",
+					sample_modal:false,
+					name:""
+			    },
+				mounted:function(){
+					/* axios.post('http://rog.pub/soup/api/list.do', {
+					    token:"12"
+					  })
+					  .then(function (response) {
+					   
+						this.list = response.data;
+						 console.log(response);
+						 console.log(list)
+					  })
+					  .catch(function (error) {
+					    console.log(error);
+					  }); */
+					  
+					  
+					 
+					 this.loadData() ;
+				},
+				
+				
+				
+				
+			    // 点击菜单使用的函数
+			    methods: {
+					loadData:function(){
+						axios
+							.get('http://rog.pub/soup/api/list.do')
+							.then(response => (this.list = response.data))
+							.catch(function (error) { // 请求失败处理
+							  console.log(error);
+							});
+					},
+					
+			        addStock: function(){
+			            var code = this.code;
+						if(code==""){
+							return;
+						};
+						axios
+						.post('http://rog.pub/soup/api/add.do?code='+code)
+						.then(function (response) {
+							//this.loadData();
+							if(response.data.msg!=""){
+								demo.loadData();
+							}
+						})
+						.catch(function (error) { // 请求失败处理
+						  console.log(error);
+						});
+
+						
+			        },
+					
+					del:function(code,name){
+						this.sample_modal = true;
+						this.code = code;
+						this.name = name
+					},
+					
+					delStock:function(e){
+						var code = e.currentTarget.id;
+						this.sample_modal = false;
+						 axios
+							.post('http://rog.pub/soup/api/del.do?code='+code)
+							.then(function (response) {
+								//this.loadData();
+								if(response.data.msg!=""){
+									demo.loadData();
+								}
+							})
+							.catch(function (error) { // 请求失败处理
+							  console.log(error);
+							}); 
+					}
+			    }
+			});
+			
+		</script>
+	</body>
+</html>

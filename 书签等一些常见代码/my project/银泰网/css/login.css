@@ -1,0 +1,39 @@
+
+.login-con{width: 385px;min-height: 375px;background: #F1F1F1;}
+.login-nav{width: 386px;height: 39px;border-bottom: 1px solid #CCC;background: #fff;}
+.login-nav li{cursor:pointer;position:relative;float: left;width: 128px;height: 37px;color:#999;text-align: center;line-height: 37px;font-size: 14px;}
+.login-nav li b{width: 1px;height: 20px;position: absolute;right:0;top: 18px;margin-top: -10px;background: #d2d2d2;}
+.login-nav li.login-bor{border-bottom: 3px solid #E5004F;}
+.login1{margin-top: 20px;}
+.login-txt{width: 350px;height: 39px;padding: 10px 18px;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;background: #fff;line-height: 39px;}
+.login-txt img{width: 25px;height: 25px;float: left;margin-right: 20px;margin-top: 5px;}
+.login-txt input{border: 0;outline: none;width: 280px;height: 30px;line-height: 30px;font-size: 14px;}
+.login2{margin-top: 0;}
+.login2 .login-txt{border-top: none;}
+.login{cursor:pointer;width: 366px;height: 50px;margin: 10px;background: #E5004F;text-align: center;line-height: 50px;font-size: 18px;color: #fff;}
+.login-reg{width: 366px;height: 30px;padding: 10px;}
+.forget-password{height: 30px;line-height: 30px;font-size: 16px;padding: 0 2px 0 10px;color: #999;}
+.login-rege{height: 30px;line-height: 30px;font-size: 14px;color: #E5004F;padding-right: 2px;}
+.message1{display: none;}
+.message2{display: none;width: 280px;height: 287px;background: #fff;padding: 0 52px 48px;margin-top: 20px;}
+.qrcode-title{padding-top: 30px;text-align: center;font-size: 14px;}
+.qrcode-main{width: 280px;height: 140px;margin: 25px 0 15px 0;position: relative;}
+.qrcode-img{position: absolute;left: 70px;top: 0;width: 140px;height: 140px;}
+.qrcode-img img{padding: 10px;opacity: 0.1;}
+.msg-err{position: absolute;left: 0;top: 0;width: 140px;height: 140px;}
+.msg-err p{width: 140px;height: 15px;margin: 38px 0 8px 0;text-align: center;font-weight: 600;}
+.msg-err span{display:block;text-align:center;line-height:36px;width: 100px;height: 36px;margin: 0 20px;background: #E5004F;color: #fff;}
+.qrcode-desc{width: 280px;height: 17px;margin-bottom: 20px;text-align: center;}
+.qrcode-desc p a{color: #666;margin: 0 5px;font-size: 14px;}
+.qrcode-tip{width: 140px;height: 15px;border: 1px solid #E5004F;margin: 0 69px;color: #E5004F;text-align: center;line-height: 15px;}
+
+.cooperate{min-height: 48px;background: #fff;padding: 18px 0;}
+.cooperate-ui{height: 24px;margin: 0 20px;position: relative;line-height: 18px;text-align: center;}
+.cooperate-ui a{display:block;width:156px;height:24px;margin:0 5px;position:relative;left:30%;color:#999;z-index: 2;background: #fff;}
+.cooperate-ui p{width: 345px;height: 1px;position: absolute;left: 0;top: 10px;background: #ccc;z-index: 1;}
+.cooperate-list{width: 385px;height: 24px;text-align: center;color: #999;}
+.cooperate-list a{margin: 0 5px;line-height: 20px;color: #999;}
+
+
+
+

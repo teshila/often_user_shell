@@ -1,0 +1,17 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+a{text-decoration:none;}
+ul,ol{list-style:none;}
+html,body{height:100%}
+/*banner*/
+#banner{width: 100%;height:85.81%;background: #ff0;}
+#banner img{width: 100%;height: 100%;}
+/*nav*/
+#nav{height:4.762%;background: #a8b4ca;}
+#nav p{float: right;}
+/*bottom*/
+#bottom{height:9.428%;margin: 0 auto;}
+#bottom h2{float: left;width: 98px;height: 53px;margin-top: 10px;}
+#bottom .btn1{float: left;margin-top: 15px;}
+#bottom .btn2{float: right;margin-top: 15px; width: 268px;height:36px; }
+#bottom .btn2 a{border-right:1px solid #353535;text-align: center;line-height:36px; padding-right: 5px;}

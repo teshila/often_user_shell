@@ -1,0 +1,115 @@
+.yt-wrap{width: 1190px;height: 120px;margin: 0 auto;}
+
+#wrap-cart{background: #eee;overflow: hidden;}
+.cart{width: 980px;margin: 0 auto;overflow: hidden;}
+.bdwraper{width: 940px;padding: 20px;min-height: 746px;margin: 20px 0;background: #fff;}
+
+.CartSteps{width: 940px;height: 80px;margin-bottom: 10px;}
+.CartSteps h2{width: 112px;height: 80px;background:url(../img/shopping-head.jpg) no-repeat ;}
+.sp-step{width: 538px;height: 57px;padding-top: 3px;margin-right: 10px;background:url(../img/shopping-head.jpg) no-repeat -158px 5px}
+.sp-step span{font-size:14px;float:left;height: 57px;line-height: 21px;text-align: center;color: #999;}
+.sp-step span.clickone{width: 76px;background:url(../img/shopping-head.jpg) no-repeat -158px -52px;color: #E5004F;}
+.sp-step em{padding-top: 18px;/*line-height: 15px;*/font-size: 12px;/*width: 76px;height: 18px;*/display: block;}
+.clicktwo{width: 402px;height: 56px;}
+/*空购物车*/
+.CommodityBox{width: 940px;min-height: 285px;margin: 10px 0;background: url(../img/coupon-bg_20131012.png) repeat-x;display: none;}
+.EmptyExplain{width: 659px;height: 148px;padding: 72px 0 0 281px;}
+.EmptyIco{width: 108px;height: 144px;margin-right: 30px;background: url(../img/shopping-head.jpg) no-repeat -754px 0;}
+.EmptyDetails h3{padding-top: 27px;font-size: 14px;font-weight: 600;line-height: 21px;}
+.EmptyDetails p{height: 38px;line-height: 38px;}
+.EmptyDetails a{display: block;padding: 7px 0 9px;border: 1px solid #ccc;text-align: center;color: #fff;background: #222;width: 94px;height: 16px;}
+/*购物车信息*/
+.cart-con{width: 940px;}
+.CommodityCate{width: 940px;height: 30px;background: #666;}
+.CommodityCate span{float: left;color: #fff;line-height: 30px;font-weight: 700;}
+.CommodityCate span.th-chk{width: 103px;height: 30px;padding-left: 27px;}
+.CommodityCate span.th-chk em{position: relative;height: 13px;margin-top: 8px;display: inline-block;width: 14px;}
+.CommodityCate span.th-chk em input{position: absolute;}
+.CommodityCate span.th-item{width: 372px;}
+.CommodityCate span.th-price{width: 130px;}
+.CommodityCate span.th-amount{width: 66px;text-align: center;margin-right: 60px;}
+.CommodityCate span.th-sum{width: 90px;}
+.CommodityCate span.th-op{width: 92px;}
+#CommodityBox{width: 940px;margin-bottom: 10px;}
+.CommodityTitle{width: 938px;height: 30px;border: 1px solid #ccc;border-bottom: 0;background: #eee;}
+.CommodityTitle h3{padding-left: 10px;font-size: 12px;font-weight: 600;line-height: 30px;color: #666;}
+.CommodityList{width: 938px;border: 1px solid #ccc;border-top: 0;position: relative;}
+.AProduct{width: 938px;padding-top: 15px;border-bottom: 1px solid #ccc;overflow: hidden;}
+.category{width: 40px;height: 62px;padding-left: 26px;}
+.category input{margin-top: 22px;width: 14px;height: 13px;}
+.goods-photo{width: 435px;}
+.property{width: 425px;margin-bottom: 10px;overflow: hidden;}
+.pro-img{width: 45px;height: 60px;border: 1px solid #ccc;margin-right: 10px;}
+.pro-img img{width: 45px;height: 60px;}
+.pro-title{width: 328px;line-height: 18px;}
+.pro-title a{color: #666;}
+.pro-pro{width: 328px;position: relative;}
+.pro-check{height: 22px;line-height: 22px;}
+.pro-check span{margin-right: 10px;color: #999;}
+.pro-tip{height: 20px;margin-right: 5px;}
+.pro-tip span{width: 36px;height: 16px;padding-left: 3px;background: #c4b697;color: #fff;display: block;text-align: center;line-height: 16px;border: 1px solid #c4b697;}
+.goods-sale{width: 130px;}
+.goods-sale em{margin-top: 19px;color: #E5004F;font-weight: 600;line-height: 20px;}
+.pro-price{margin-top: 19px;color: #E5004F;font-weight: 600;line-height: 20px;}
+.pro-number{width: 66px;height: 20px;margin-top: 19px;padding-right: 60px;position: relative;}
+.nums-red{width: 16px;height: 18px;border: 1px solid #ccc;background: #eee;/*position: absolute;left: 0;top: 0;*/text-align: center;}
+.pro-nums{width: 28px;height: 16px;border: 0;border: 1px solid #ccc;/*position: absolute;left: 17px;top: 0;*/text-align: center;outline: none;}
+.nums-add{width: 16px;height: 18px;border: 1px solid #ccc;background: #eee;/*position: absolute;right: 0;top: 0;*/text-align: center;}
+.pro-sort{width: 90px;margin-top: 19px;line-height: 20px;color: #666;}
+.pro-del{width: 91px;margin-top: 11px;}
+.decidetime{position: relative;}
+.decidetime a{display: block;width: 52px;height: 18px;padding-left: 16px;color: #666;line-height: 18px;}
+.pro-collect{background: url(../img/qxan.png) no-repeat 0 -92px;}
+.pro-remove{background: url(../img/qxan.png) no-repeat 0 -125px;}
+.PayofTable{width: 938px;min-height: 150px;border: 1px solid #ccc;margin: 10px 0 20px 0;background: #eee;}
+.PayofOne{margin: 15px 20px 5px;overflow: hidden;}
+.quanxuan{padding-left: 6px;width: 55px;line-height: 24px;}
+.quanxuan input{margin-top: 7px;width: 14px;height: 13px;float: left;}
+.RegretOption a{line-height: 24px;margin-right: 15px;float: left;}
+.J-freight{padding: 0 6px 0 21px;height: 24px;line-height: 24px;font-size: 14;font-weight: bold;color: #666;background: url(../img/qxan.png) no-repeat 0 -330px;}
+.PayofTwo{margin: 0 20px;border-bottom: 1px solid #ccc;padding-bottom: 15px;overflow: hidden;}
+.TotalAmount{height: 24px;padding-right: 6px;}
+.TotalAmount span{float: left;font-size: 14px;line-height: 24px;color: #666;}
+.TotalAmount span em{color: #E5004F;}
+.TotalAmount span strong{color: #E5004F;}
+.TotalAmount span.math{padding: 0 5px;color: #bfbebe;}
+.PayofFou{width: 938px;height: 65px;}
+.PayofFouCont{width: 886px;height: 42px;padding: 8px 26px 15px;}
+.Accountsbox{width: 147px;height: 43px;margin-left: 15px;background: url(../img/shopping-submit.png) no-repeat;}
+.AccountsNum{height: 42px;line-height: 42px;font-size: 14px;font-weight: 600;}
+.AccountsNum em{font-size: 16px;color: #E5004F;font-weight: 600;}
+.cue{margin-left: -5px;font-size: 12px;font-weight: 100;color: #999;}
+.pay-total{font-size: 16px;color: #E5004F;padding: 0 5px;font-weight: 600;}
+
+/*购买推荐*/
+.interested{width: 940px;min-height: 361px;position: relative;}
+.inter-title{width: 940px;height: 32px;background: #f4f4f4;border-bottom: 1px solid #ccc;}
+.cursor{background: #e1e1e1;}
+.inter-title span{position: relative;padding: 0 20px;line-height: 32px;color: #666;height: 32px;display: inline-block;}
+.inter-title span.cursor i{width: 18px;height: 9px;margin-left: -9px;position: absolute;left: 84px;top: 32px;background: url(../img/shopping-interested.png) no-repeat 0 -36px;}
+.inter-title span.bfd_j i{position: absolute;left: 44px;}
+.inter-mian{width: 940px;height: 328px;}
+.inter-solo{width: 940px;height: 303px;padding-top: 25px;position: relative;}
+.inter-prev{display:block;width: 21px;height: 303px;margin-right: 26px;background: url(../img/shopping-interested.png) no-repeat -42px -51px;}
+.inter-next{display:block;width: 21px;height: 303px;background: url(../img/shopping-interested.png) no-repeat -63px -51px;}
+.eva-switchable-triggers{position: absolute;right: 5px;top: 0;}
+.eva-switchable-triggers li{float: left;width: 15px;height: 24px;line-height: 24px;text-align: center;font-size: 24px;color: #999;}
+.eva-switchable-triggers li.eva-switchable-active{color: #E5004F;}
+.inter-list{width: 848px;height: 303px;overflow: hidden;position: relative;}
+.inter-list-mian{position: absolute;left: 0;width: 5220px;height: 303px;}
+.inter-list-mian li{width: 152px;height: 303px;margin-right: 22px;float: left;}
+.inter-pro-pic{width: 150px;height: 200px;border: 1px solid #ccc;}
+.inter-pro-txt{width: 152px;height: 38px;padding-top: 5px;line-height: 18px;overflow: hidden;}
+.inter-pro-txt a{color: #666;}
+.inter-pro-txt a:hover{color: #E5004F;}
+.inter-pro-dis{height: 20px;line-height: 20px;font-weight: 600;color: #E5004F;}
+.inter-pro-add{height: 28px;padding-top: 10px;}
+.inter-pro-add a{padding: 5px 15px 6px;border: 1px solid #ccc;background: #fdfdfd;text-align: center;}
+.bfd_a{display: none;}
+.bfd_c{display: none;}
+
+
+
+
+
+

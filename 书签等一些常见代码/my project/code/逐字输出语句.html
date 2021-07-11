@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="描述">
+    <meta name="keywords" content="关键字">
+    <title></title>
+    <style type="text/css">
+    	*{
+            margin:0;padding:0;
+        }
+    	.box{
+    		width:400px;
+    		height:500px;
+    		border:1px solid red;
+    		margin:190px auto;
+            padding: 10px;
+    	}
+
+    	.box p{
+    		height:30px;
+    		line-height:30px;
+    		font-size:16px;
+    		font-family:"微软雅黑";
+    		text-indent:30px;
+    	}
+    </style>
+</head>
+<body>
+	<div class="box">
+		<p id="text"></p>
+	</div>
+    <script>
+        window.onload = function(){
+            function $(id){
+                return document.getElementById(id);
+            };
+            /*创建数组*/
+            var b = ['最美得时光就是遇见你!',''];
+
+            var str = b.join(""),
+                i = 0,
+                /*字符串分割*/
+                arr=str.split(''),
+                textDom = $('text');
+                timer = null;
+            function autoPlay(){
+                /*设置定时器*/
+                timer= setInterval(function(){
+                    if(i>str.length-1){
+                        // i=0;
+                        // textDom.innerHTML = '';
+                        return false;
+                    }else{
+                        textDom.innerHTML += arr[i];
+                        i++;
+                    }
+                },50);
+            };
+
+            autoPlay();
+        }
+</script>
+</body>
+</html>

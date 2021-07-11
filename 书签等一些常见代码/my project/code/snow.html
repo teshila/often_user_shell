@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="描述">
+    <meta name="keywords" content="关键字">
+    <title></title>
+    <style type="text/css">
+    	* {
+            margin:0;
+            padding:0;
+        }
+        body {
+            background:url("images/3.jpg") no-repeat fixed top left;
+            background-size:cover;
+        }
+        html {
+            overflow: hidden;
+        }
+        .container {
+            width: 410px;
+            height: 374px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .love {
+            margin: 54px auto;
+            background: pink;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transform: rotate(45deg) scale(.6);
+        }
+        .love:after {
+            content: "";
+            background: pink;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50%;
+            left: 0;
+        }
+        .love:before {
+            content: "";
+            background: pink;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: -50%;
+        }
+    	.box {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-45deg);
+            z-index: 520;
+    	}
+
+    	.box p{
+    		font-size: 26px;
+    		font-family:"微软雅黑";
+            letter-spacing: 4px;
+            line-height: 5;
+    	}
+    </style>
+</head>
+<body>
+    <div class="container" id="box">
+        <div class="love">
+            <div class="box">
+                <p id="text"></p>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <audio src="audio/1.mp3" autoplay></audio>
+    <script>
+        addEventListener('load',function(){
+            flyPrint.init();
+        });
+
+        //  逐字打印  面向对象写法
+        (function(win){
+            var obj = {
+                // 初始化
+                init: function(){
+                    this.load();
+                    this.autoPlay();
+                },
+                // 数据处理
+                load: function(){
+                    // 封装获取ID 函数
+                    this.$ = function(id){
+                        return document.getElementById(id);
+                    };
+                    // 获取文本 DOM
+                    this.textDom = this.$('text');
+                    // 定义数组数据
+                    this.arr = ['最美的时光就是遇见你',''];
+                    // 把数组分割成字符串
+                    this.str = this.arr.join("");
+                    // 把字符串分割成数组
+                    this.arr = this.str.split('');
+                    // 定义一个空的定时器
+                    this.timer = null;
+                },
+                // 主函数
+                autoPlay: function(){
+                    //  改变this 的指向
+                    var self = this;
+                    var i = 0;
+                    // 设置定时器
+                    self.timer = setInterval(function(){
+                        if(i > self.str.length - 1){
+                            // i = 0 ;
+                            // self.textDom.innerHTML = '';
+                            start();
+                            clearInterval(self.timer);
+                        }else{
+                            self.textDom.innerHTML += self.arr[i];
+                            i++ ;
+                        }
+                    },200);
+                }
+            };
+            win.flyPrint = obj;
+        })(window);
+
+
+        //  canvas 制作背景
+        (function(){
+            //  1、获取可视范围 作为canvas 的宽度 高度
+            //  2、定义api  画圆 arc
+            //  3、用数组存放雪花
+            //  4、随机雪花的位置  Math.random();   x  y
+            //  5、雪花下落   肯定有一个定时器
+
+            // 获取浏览器的可视范围
+            var W = document.documentElement.clientWidth;
+            var H = document.documentElement.clientHeight;
+            // alert(W+"*"+H);
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            // 动态添加画布的大小
+            canvas.width = W;
+            canvas.height = H;
+            //  初始化雪花的数量
+            var snows = 60;
+            // 存放雪花的坐标
+            var drops = [];
+            //  遍历初始雪花的坐标并存放在一个对象当中
+            for(var i = 0; i<snows; i++){
+                drops.push({
+                    x: Math.random()*W,
+                    y: Math.random()*H,
+                    r: Math.random()*2+1
+                });
+            }
+
+            // 绘画雪花
+            function draw(){
+                // 雪花阴影颜色
+                ctx.shadowColor = "#fff";
+                // 偏移水平 垂直
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
+                // 阴影模糊度
+                ctx.shadowBlur = 10;
+                ctx.clearRect(0,0,W,H);
+                // 填充的颜色
+                ctx.fillStyle = "#fff";
+                ctx.strokeStyle = "rgba(255,255,255,.5)";
+                ctx.beginPath();
+                // 遍历得到每一个雪花的坐标
+                for (var i = 0; i < snows; i++) {
+                    var d = drops[i];
+                    // console.log(d.x);
+                     // 起点圆心点的坐标
+                    ctx.moveTo(d.x,d.y);
+                    ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+                };
+                // 填充
+                ctx.fill();
+                // 绘画线条
+                ctx.stroke();
+                updates();
+            };
+            // draw();
+            //  下落方法
+            function updates(){
+                for (var i = 0; i < snows; i++) {
+                   var d = drops[i];
+                   // 定义随机下落步长
+                   d.y += Math.random()*15;
+                   // 边界判断
+                   if (d.y>H) {
+                        d.y = 0;
+                   };
+                };
+            };
+            setInterval(draw,50);
+        })();
+
+        // 盒子移动
+
+        //  所有的动画特效都是基于 定位来做的
+        //  1、思路怎样让图片下落？  top  margin-top
+        //  2、怎样看到下落的过程？  定时器   setInterval();
+        //  3、边界判断 边界多大 ？  屏幕的分辨率 screen  if
+
+        // offsetWidth   盒子的宽度
+        // offsetTop     盒子距离浏览器的宽度
+
+        // 获取对象
+        var boxDom = document.getElementById("box");
+        var vy = 0;
+        var vx = 0;
+        var sy = 10;
+        var sx = 10;
+        var timer = null;
+        //  获取浏览器的大小
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        function start(){
+            timer = setInterval(function(){
+                // 判断上下的边界
+                if (vy>=(h-boxDom.offsetHeight)) {  //判断到达边界反弹回来
+                    sy=-sy;
+                };
+                if(vy<0){
+                    sy=-sy;
+                }
+                boxDom.style.top = vy+"px";
+                vy+=sy;
+
+                // 判断左右的边界
+                if (vx>=(w-boxDom.offsetWidth)) {  //判断到达边界反弹回来
+                    sx=-sx;
+                };
+                if(vx<0){
+                    sx=-sx;
+                }
+                boxDom.style.left = vx+"px";
+                vx+=sx;
+            },30);
+        }
+        boxDom.onmouseover = function(){
+            //  清除定时器
+            clearInterval(timer);
+        }
+        boxDom.onmouseout = function(){
+             start();
+        }
+    </script>
+</body>
+</html>

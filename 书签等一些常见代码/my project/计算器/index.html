@@ -1,0 +1,256 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-size:12px;
+            font-family:Arial,Georgia,"Times New Roman",Times,serif;
+            color:#555;
+            text-align:center;
+            background-color:#e2e2e2;
+        }
+        ul,li {
+            list-style: none;
+        }
+        h6 {
+            font-size:20px;
+            text-align: center;
+        }
+        .clearfix {
+            zoom: 0;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+        }
+        .calculator {
+            width:94%;
+            margin:50px auto;
+            background-color:#f2f2f2;
+            box-shadow: 0 0 20px pink;
+            border-radius: 10px;
+            padding-bottom: 4px;
+        }
+
+        .calculator ul {
+            margin:5px 14px;
+        }
+        .calculator li {
+            float:left;
+            width:14.43%;
+            margin:0.5%;
+            line-height:32px;
+            font-size:32px;
+            background-color:#eaeaea;
+            padding:2.28%;
+        }
+        .calculator li.tool {
+            background-color:#738FD8;
+        }
+        .calculator li.D06A15 {
+            background-color:#D06A15;
+        }
+        .calculator li:hover {
+            background-color:#f9f9f9;
+            cursor:pointer;
+        }
+        .calculator li:active {
+            background-color:#fc0;
+            cursor:pointer;
+        }
+        .calculator li.tool:active {
+            background-color:#d8e8ff;
+            cursor:pointer;
+        }
+        .calcu-head {
+            padding:10px 15px 5px;
+        }
+        .screen {
+            width:97%;
+            height:42px;
+            line-height:42px;
+            padding:4px;
+            border:#e6e6e6 1px solid;
+            border-bottom:#f2f2f2 1px solid;
+            border-right:#f2f2f2 1px solid;
+            margin:10px auto;
+            direction:ltr;
+            text-align:right;
+            font-size:3em;
+            color:#999;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator" class="calculator">
+        <form name="calculator" action="" method="get">
+            <div id="calcu-head" class="calcu-head">
+                <h6>计算器</h6>
+            </div>
+            <div id="calcu-screen">
+                <!--配置显示窗口，使用onfocus="this.blur();"避免键盘输入 disabled 禁用-->
+                <input type="text" name="numScreen" id="result" class="screen" value="0" onfocus="this.blur();" disabled/>
+            </div>
+            <div id="calcu-btn">
+                <ul class="clearfix"> <!--配置按钮-->
+                    <li onclick="command(7)">7</li>
+                    <li onclick="command(8)">8</li>
+                    <li onclick="command(9)">9</li>
+                    <li class="tool" onclick="del('j')">←</li>
+                    <li class="tool" onclick="clearzero('j')">C</li>
+                    <li onclick="command(4)">4</li>
+                    <li onclick="command(5)">5</li>
+                    <li onclick="command(6)">6</li>
+                    <li class="tool" onclick="op('*','g')">×</li>
+                    <li class="tool" onclick="op('/','g')">÷</li>
+                    <li onclick="command(1)">1</li>
+                    <li onclick="command(2)">2</li>
+                    <li onclick="command(3)">3</li>
+                    <li class="tool" onclick="op('+','g')">+</li>
+                    <li class="tool" onclick="op('-','g')">-</li>
+                    <li onclick="command(0)">0</li>
+                    <li onclick="dzero('g')">00</li>
+                    <li onclick="dot('g')">.</li>
+                    <li class="tool" onclick="op('%','g')">%</li>
+                    <li class="tool D06A15" onclick="equal('j')">=</li>
+                </ul>
+            </div>
+            <div id="audioBox">
+                <embed id="devUnknown"  src="audio/0.wav"   width="0"   height="0"   loop="false"   autostart="false"/>
+            </div>
+        </form>
+    </div>
+    <script>
+    	//获取计算器的结果dom对象
+    	var resultDom = document.getElementById("result"),
+        	//操作符锁
+        	operate = true,
+        	//小数点锁
+        	xop = true;
+    	//点击数字执行
+    	function command(num){
+    		//获取文本框的内容
+    		var str = resultDom.value;
+    		//如果是0就用""填充
+    		str = (str=="0"?"":str);
+    		//拼接点击的数字
+    		str += num;
+    		//赋给文本框
+    		resultDom.value = str;
+    		//操作符锁打开
+    		operate = true;
+    		//播放音效
+    		play(num);
+    	};
+
+    	//点击操作符
+    	function op(op,m){
+    		//操作符打开
+    		if(operate){
+    			//获取文本框的内容
+    			var num = resultDom.value;
+    			//如果是0
+    			num = (num=="0"?"":num);
+    			//拼接操作符
+    			resultDom.value = num+op;
+    			//锁住操作符
+    			operate = false;
+    			//小数点打开
+    			xop = true;
+    		}
+    		play(m);//播放音效
+    	};
+
+    	//计算等于
+    	function equal(m){
+    		play(m);//播放音效
+    		var result = resultDom.value;
+    		//判断表达式的格式是不是正确的，如果不正确就
+    		//if(!/^[\+|\-]*(\d+)(.*)(\d+)$/.test(result)){
+    		//	resultDom.value = eval(0+result);
+    		//	return;
+    		//}
+    		//计算结果
+    		var r = eval(result);
+    		//计算完毕赋给文本框
+    		resultDom.value = r;
+    		//操作符激活
+    		operate = true;
+    		//如果结果又小数，不激活小数点击了
+    		var r = resultDom.value+"";
+    		xop =r.indexOf('.')==-1 ?true:false;
+
+    	};
+
+    	//退格
+    	function del(m){
+    		//获取文本框的内容
+    		var str = resultDom.value;
+    		//截取最后一个数字
+    		str = str.substring(0,str.length - 1);
+    		//截取倒数第二个数字
+    		var cstr = str.substring(str.length - 1);
+    		//如果倒数第二个只是.或者标点符号直接一起清空
+    		if(cstr=='.' || /[\+|\-|\*|\/|\%]/.test(cstr)){
+    			str = str.substring(0,str.length - 1);
+    		}else{
+    			str = (str=="" ?0:str);
+    		}
+    		//打开操作符
+    		operate = true;
+    		//重新赋值
+    		resultDom.value = str;
+    		//播放音效
+    		play(m);
+    	};
+
+    	//清空
+    	function clearzero(m){
+    		//还原默认值
+    		resultDom.value = 0;
+    		operate = true;
+    		xop = true;
+    		play(m);
+    	};
+
+    	//点击小数
+    	function dot(m){
+    		if(xop){
+    			var num = resultDom.value;
+    			num = num + ".";
+    			resultDom.value = num;
+    			xop = false;//锁住小数，防止继续点击
+    		}
+    		play(m);//播放音效
+    	};
+
+    	//双0拼接
+    	function dzero(m){
+    		//获取文本框的值
+    		var num = resultDom.value;
+    		if(num=="0"){//如果是0没必要拼接
+    			return;
+    		}else{
+    			resultDom.value = num+"00";
+    		}
+    		play(m);//播放音效
+    	};
+
+    	//播放音效,在上方定义了一个audioBox的div
+    	function play(num){
+    		var boxDom = document.getElementById("audioBox");
+    		boxDom.innerHTML = "<embed src='audio/"+num+".wav' width='0' height='0'/>";
+    	};
+    </script>
+</body>
+</html>

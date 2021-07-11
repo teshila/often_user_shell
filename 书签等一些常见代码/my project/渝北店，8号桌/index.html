@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body ng-app="app" ng-cloak>
+
+		<ng-view></ng-view>
+
+
+		<script type="text/javascript" src="js/angularjs.min.js" ></script>
+		<script type="text/javascript" src="js/mobile.js" ></script>
+		<script type="text/javascript" src="js/angular-route.min.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+
+		<script  type="text/ng-template" id="index">
+			<div>
+				<header class="index-header">
+					<h1>
+						<img src="img/logo.png" alt=""  />
+					</h1>
+					渝北店，8号桌
+				</header>
+				<div class="main">
+					<ul class="nav">
+						<li ng-repeat="item in list" ng-click="show($index)" >
+
+							<div class="box" ng-class="{true: 'active'}[current == $index]">
+								<img ng-src="{{item.icon}}" alt=""  />
+							</div>
+
+							<a ng-class="{true: 'active1'}[current == $index]">{{item.name}}</a>
+
+						</li>
+
+					</ul>
+					<div class="content">
+						<h3>{{list[current].name}}</h3>
+						<ul>
+							<li class="list" ng-repeat="item in arr">
+								<img ng-src="{{item.pic}}" alt=""  />
+								<p>{{item.name}}</p>
+								<span>{{item.price | currency:'￥'}}<em>/{{item.unit}}</em></span>
+								<div class="anniu">
+									<button class="mius" ng-hide="item.number===0" ng-click="mius($index)"></button>
+									<span class="txt"  ng-hide="item.number===0">{{item.number}}</span>
+									<button class="add" ng-click="add($index)"></button>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				<footer class="index-footer">
+					<p class="infor">已点 <span> {{totalNumber}}</span>道菜</p>
+					<p class="infor-offer" ng-click="goCart()" ng-class="{true:'active3'}[totalNumber !== 0]">已点菜单</p>
+				</footer>
+
+
+
+
+			</div>
+		</script>
+		<script type="text/ng-template" id="dinner">
+			<div>
+				<header class="dinner-head">
+					<button class="infor-back" ng-click="back()"></button>
+					确认订单
+				</header>
+				<div class="dinner-content">
+
+					<ul class="cart-list">
+						 <li class="username">
+						 	<img src="img/pep.png" alt="" />
+						 	阿国是糖
+						 </li>
+						 <li ng-repeat="item in cart track by $index" ng-if="item.number">
+						 	<p class="list-name">{{item.name}}</p>
+							<span class="list-price">{{item.price | currency:'￥'}}<em>/{{item.unit}}</em></span>
+							<div class="anniu1">
+								<button class="mius" ng-click="mius($index)"></button>
+								<span class="txt">{{item.number}}</span>
+								<button class="add" ng-click="add($index)"></button>
+							</div>
+
+						 </li>
+
+					</ul>
+
+					<div class="action">
+						备注：(选填)请输入您的口味、要求、忌口等
+					</div>
+				</div>
+
+
+				<footer class="index-footer">
+						<p class="infor">已点 <span> {{totalNumber}} </span>道菜</p>
+						<p class="infor-offer" ng-class="{true:'active1'}[totalNumber !== 0]">传送厨房</p>
+				</footer>
+			</div>
+		</script>
+	</body>
+</html>

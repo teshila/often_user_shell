@@ -1,0 +1,85 @@
+{
+	"status":1,
+	"mag":"success",
+	"sale_center":[
+					{
+						"id":1001,
+						"center":"imgsale/24cb3f68e629460ab68ee55e99685519.jpg"
+					},
+					{
+						"id":1002,
+						"center":"imgsale/a2ca033b11914db08205326584895fbc.jpg"
+					},
+					{
+						"id":1003,
+						"center":"imgsale/ac0fbcab872044ed9e51484af4139af3.jpg"
+					}
+			],
+	"right":[
+				{
+					"id":2001,
+					"right":"imgsale/bbc7658c3e9e402780d58961d7e2fb2f.jpg",
+					"name":"Michael Kors链条包",
+					"price":"2,474"
+				},
+				{
+					"id":2002,
+					"right":"imgsale/4ab64433435f4467a71419b8f92a02a2.jpg",
+					"name":"Estee Lauder眼霜",
+					"price":"461"
+				}
+			],
+	"bottom":[
+				{
+					"id":3001,
+					"bottom":"imgsale/7c9588e606cc435f820de3e2a7f31938.jpg",
+					"name":"<东方美感>晶石首饰专场"
+				},
+				{
+					"id":3002,
+					"bottom":"imgsale/d4da5fa83b4241a9b1b7dc1464a45a26.jpg",
+					"name":"<舒适休闲>大牌男鞋专场"
+				},
+				{
+					"id":3003,
+					"bottom":"imgsale/cc0b8556d4a34ec8bb84fce519dde488.jpg",
+					"name":"<年轻性感>潮流男女装"
+				},
+				{
+					"id":3004,
+					"bottom":"imgsale/5975a952d7414d878b5a34f0e3275858.jpg",
+					"name":"<法式魅力>迪奥美妆专场"
+				},
+				{
+					"id":3005,
+					"bottom":"imgsale/5975a952d7414d878b5a34f0e3275858.jpg",
+					"name":"<潇洒有型>日韩针织衫"
+				},
+				{
+					"id":3006,
+					"bottom":"imgsale/21f6433709384539b353daf7ae06801b.jpg",
+					"name":"<简洁时尚>女士外套专场"
+				}
+			 ],
+	
+	"auc_img":[
+					{
+						"img":"imgsale/b6b877518aa24500946fa2df65ae2b8b.jpg"
+					}
+			  ],
+	
+	"auc_a":[
+				{
+					"a":"<a href='#'>01月03日BVLGARI(宝格丽) #B.Zero1系列18k玫瑰金白陶瓷三环项链</a>"
+				},
+				{
+					"a":"<a href='#'>01月04日Alexander McQueen(亚历山大麦昆) 黑色绒布金色刺绣手拿包</a>"
+				},
+				{
+					"a":"<a href='#'>01月05日VacheronConstantin/江诗丹顿纵横四海系列男士自动机械腕表49150/000R-9454</a>"
+				},
+				{
+					"a":"<a href='#'>01月05日VacheronConstantin/江诗丹顿纵横四海系列男士自动机械腕表49150/000R-9454</a>"
+				}
+			]			
+}

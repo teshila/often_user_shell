@@ -1,0 +1,228 @@
+
+
+#wrap-banner{height: 470px;position: relative;}
+.pannels{height: 470px;position: relative;}
+.pannel1{width:100%;height: 470px;opacity: 0;position: absolute;left:0;top:0;background: url(../img/b1.jpg) no-repeat;background-position: center 0;}
+.content-img{width: 1190px;height: 470px;margin: 0 auto;position: relative;}
+.eva-switchable-prev{display:none;width: 30px;height: 60px;background: url(../img/prevnext.png) no-repeat;position: absolute;top: 205px;left: 246px;}
+.eva-switchable-next{display:none;width: 30px;height: 60px;background: url(../img/prevnext.png) no-repeat -30px 0;position: absolute;top: 205px;right: 236px;}
+.lunbo-num{width: 1190px;margin: 0 auto;position: relative;}
+.nav_trriger{position: absolute;top: -30px;left: 50%;height: 8px;width: 124px;}
+.nav_trriger li{width: 30px;height: 8px;float: left;margin-right: 1px;background: #000;}
+.nav_trriger li.active{background: #E5004F;}
+
+.f_pic{width: 1190px;margin:0 auto;position: relative;}
+.focus_pic{width: 200px;height: 470px;position: absolute;top: -470px;right: 0;}
+
+/*超值特卖*/
+.product{width: 1190px;min-height: 325px;margin: 0 auto;margin-bottom: 25px;padding-top: 30px;}
+.product-left{width: 910px;}
+.product-sort{width: 910px;overflow: hidden;}
+.product-sort li{float: left;width: 303px;height: 47px;position: relative;border-bottom: 5px solid #000;}
+.product-sort li.border-b{border-bottom-color:#E5004F;font-weight: 600;}
+.product-sort li a{display:block;width: 303px;height: 47px;line-height: 47px;text-align: center;font-size: 16px;}
+.product-sort li span{width:7px;height:4px;position:absolute;left:143px;top:43px;}
+.product-sort li span.first{background: url(../img/yt_ico.png) no-repeat 0 -16px;}
+.goods-lie{width: 940px;min-height: 242px;padding-top: 10px;}
+.border-anmiate{width: 220px;height: 260px;border: 1px solid #ccc;margin-right: 7px;float: left;position: relative;}
+.p1{width: 220px;height: 250px;}
+.pic{width: 220px;height: 210px;}
+.pic img{margin: 0 35px;}
+.p2{width: 198px;height: 20px;padding-left: 12px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.p2 span{color: #909090;}
+.p2 a{color: #666;text-decoration: underline;}
+.p2 a:hover{color:#e5004f ;}
+.goods2{display: none;}
+.goods3{display: none;}
+.p2 strong{color: #e5004f;font-weight: 600;font-size: 14px;margin-right: 10px;}
+.b1{width: 0;height: 1px;position: absolute;top: 0;left: 0;background: #666;}
+.b2{width: 1px;height: 0px;position: absolute;right: 0;bottom: 0;background: #666;}
+.b3{width: 0;height: 1px;position: absolute;bottom: 0;left: 0;background: #666;}
+.b4{width: 1px;height: 0px;position: absolute;top: 0;left: 0;background: #666;}
+.product-right{padding-top: 24px;}
+
+/*银泰百货*/
+.news{width: 1190px;min-height: 624px;margin: 0 auto;margin-top: 36px;}
+.news-top{width: 1190px;height: 46px;}
+.news-top h2{width: 380px;height: 36px;background: url(../img/floor_tk.png) no-repeat;margin-bottom: 10px;}
+.news-bottom{width: 1168px;height: 555px;border: 1px solid #ccc;padding: 10px;;}
+.news-right{width: 815px;overflow: hidden;}
+.newsR-top{height: 35px;border-bottom: 3px solid #666;position: relative;}
+.newsT{position: absolute;left: 0;top: 0;}
+.newsT li{position:relative;width: 102px;height: 35px;float: left;line-height: 35px;text-align: center;border-bottom: 3px solid #666;}
+.newsT li.border-bm{border-bottom-color: #E5004F;}
+.newsT li a{font-size: 14px;color: #666;}
+.newsT li span{width: 7px;height: 4px;position: absolute;left: 51px;top: 31px;}
+.newsT li span.first{background: url(../img/yt_ico.png) no-repeat 0 -16px;}
+.newsR-bottom{width:910px;height: 517px;}
+.newsR1 a{height: 250px;margin:4px 5px 0 0;float: left;}
+.newsR2{display: none;}
+.nev{margin-top: 10px;}
+.nev li{float: left;width:198px;height:248px;border:1px solid #ccc ;position: relative;margin:0 5px 5px 0;}
+.photo{width: 198px;height: 200px;}
+.photo img{margin: 0 24px;}
+.text{padding: 5px;background: #f8f8f8;width: 188px;height: 38px;}
+.txt{width:188px;height: 20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis ;line-height: 18px;}
+.txt a{color: #333;text-decoration: underline;}
+.price{line-height: 18px;}
+.price1{color: #e5004f;}
+.price2{color: #909090;text-decoration: line-through;}
+
+/*时尚名品*/
+.floor-mp{width: 1190px;min-height: 418px;margin: 36px auto 0;}
+.mp-top{width: 1190px;height: 46px;}
+.mp-top a h3{width:260px;height:36px;background: url(../img/floor_all.png) no-repeat;margin-bottom: 10px;}
+.mp-left{width: 228px;height: 370px;border: 1px solid #ccc;margin-right: 8px;}
+.mp-nav{width: 220px;height: 172px;padding: 16px 0 0 8px;}
+.mp-nav li{width: 67px;height: 32px;float: left;margin: 0 5px 5px 0;}
+.mp-nav li a{display:block;width: 65px;height: 32px;line-height: 32px;text-align: center;border: 1px solid #ccc;font-size: 14px;color: #666;}
+.mp-nav li a:hover{color: #fff;background: #E5004F;}
+.mp-store{width: 200px;height: 140px;margin-left: 15px;position: relative;border-top: 1px dashed #ccc;background: #f2f2f2;}
+.store-lie{width: 160px;height: 116px;margin: 15px 20px 0;position: relative;overflow: hidden;}
+.lie{width: 1020px;height: 116px;position: absolute;left: 0;overflow: visible;}
+.img1{width: 170px;height: 116px;float: left;}
+.img1 img{width: 75px;height: 50px;margin: 0 5px 5px 0;float: left;}
+.pre{width: 14px;height: 139px;position: absolute;left: 5px;top: 0;background: url(../img/lr.png) no-repeat 0 center;}
+.next{width: 14px;height: 139px;position: absolute;left: 180px;top: 0;background: url(../img/lr.png) no-repeat -32px center;}
+.mp-content{width: 390px;height: 370px;border: 1px solid #ccc;position: relative;overflow: hidden;}
+.list{width: 780px;height: 370px;overflow: hidden;position: absolute;}
+.list li{float: left;}
+.list1{width:36px;height:13px;position: absolute;left: 182px;bottom: 16px;}
+.list1 li{float: left;width: 13px;height: 13px;margin-right: 5px;border-radius: 50%;background: #666;}
+.list1 li.active{background: #E5004F;}
+.prev{width: 30px;height: 60px;position: absolute;left: -30px;top: 155px;background: url(../img/prevnext.png) no-repeat;}
+.nextP{width: 30px;height: 60px;position: absolute;right: -30px;top: 155px;background: url(../img/prevnext.png) no-repeat right 0;}
+.mp-right{width: 552px;height: 372px;overflow: hidden;}
+.mp-goods{width: 560px;height: 380px;}
+.produnct-block{float: left;width: 280px;height: 190px;}
+.mp-s{width: 272px;height: 182px;position: relative;}
+.mp-p{width: 270px;height: 180px;border: 1px solid #ccc;}
+/*潮流女装*/
+.floor-nz{width: 1190px;min-height: 418px;margin: 36px auto 0;}
+.nz-top{width: 1190px;height: 46px;}
+.nz-top a h3{width:260px;height:36px;background: url(../img/floor_all.png) no-repeat 0 -46px;margin-bottom: 10px;}
+.nz-store{width: 200px;height: 140px;margin-left: 15px;position: relative;border-top: 1px dashed #ccc;background: #f2f2f2;}
+.nz-store-lie{width: 160px;height: 116px;margin: 15px 20px 0;position: relative;overflow: hidden;}
+.nz-lie{width: 1020px;height: 116px;position: absolute;left: 0;overflow: visible;}
+.nz-content{width: 390px;height: 370px;border: 1px solid #ccc;position: relative;overflow: hidden;}
+.nz-list{width: 780px;height: 370px;overflow: hidden;position: absolute;}
+.nz-list li{float: left;}
+.nz-right{width: 552px;height: 372px;overflow: hidden;}
+.nz-goods{width: 560px;height: 380px;}
+/*精品男装*/
+.floor-jp{width: 1190px;min-height: 418px;margin: 36px auto 0;}
+.jp-top{width: 1190px;height: 46px;}
+.jp-top a h3{width:260px;height:36px;background: url(../img/floor_all.png) no-repeat 0 -92px;margin-bottom: 10px;}
+.jp-store{width: 200px;height: 140px;margin-left: 15px;position: relative;border-top: 1px dashed #ccc;background: #f2f2f2;}
+.jp-store-lie{width: 160px;height: 116px;margin: 15px 20px 0;position: relative;overflow: hidden;}
+.jp-lie{width: 1020px;height: 116px;position: absolute;left: 0;overflow: visible;}
+.jp-content{width: 390px;height: 370px;border: 1px solid #ccc;position: relative;overflow: hidden;}
+.jp-list{width: 780px;height: 370px;overflow: hidden;position: absolute;}
+.jp-list li{float: left;}
+.jp-right{width: 552px;height: 372px;overflow: hidden;}
+.jp-goods{width: 560px;height: 380px;}
+/*时尚鞋靴*/
+.floor-xx{width: 1190px;min-height: 418px;margin: 36px auto 0;}
+.xx-top{width: 1190px;height: 46px;}
+.xx-top a h3{width:260px;height:36px;background: url(../img/floor_all.png) no-repeat 0 -138px;margin-bottom: 10px;}
+.xx-store{width: 200px;height: 140px;margin-left: 15px;position: relative;border-top: 1px dashed #ccc;background: #f2f2f2;}
+.xx-store-lie{width: 160px;height: 116px;margin: 15px 20px 0;position: relative;overflow: hidden;}
+.xx-lie{width: 1020px;height: 116px;position: absolute;left: 0;overflow: visible;}
+.xx-content{width: 390px;height: 370px;border: 1px solid #ccc;position: relative;overflow: hidden;}
+.xx-list{width: 780px;height: 370px;overflow: hidden;position: absolute;}
+.xx-list li{float: left;}
+.xx-right{width: 552px;height: 372px;overflow: hidden;}
+.xx-goods{width: 560px;height: 380px;}
+/*潮流箱包*/
+.floor-bag{width: 1190px;min-height: 418px;margin: 36px auto 0;}
+.bag-top{width: 1190px;height: 46px;}
+.bag-top a h3{width:260px;height:36px;background: url(../img/floor_all.png) no-repeat 0 -184px;margin-bottom: 10px;}
+.bag-store{width: 200px;height: 140px;margin-left: 15px;position: relative;border-top: 1px dashed #ccc;background: #f2f2f2;}
+.bag-store-lie{width: 160px;height: 116px;margin: 15px 20px 0;position: relative;overflow: hidden;}
+.bag-lie{width: 1020px;height: 116px;position: absolute;left: 0;overflow: visible;}
+.bag-content{width: 390px;height: 370px;border: 1px solid #ccc;position: relative;overflow: hidden;}
+.bag-list{width: 780px;height: 370px;overflow: hidden;position: absolute;}
+.bag-list li{float: left;}
+.bag-list1{width:36px;height:13px;position: absolute;left: 182px;bottom: 16px;}
+.bag-list1 li{float: left;width: 13px;height: 13px;margin-right: 5px;border-radius: 50%;background: #666;}
+.bag-list1 li.active{background: #E5004F;}
+.bag-right{width: 552px;height: 372px;overflow: hidden;}
+.bag-goods{width: 560px;height: 380px;}
+/*美容护肤*/
+.floor-mr{width: 1190px;min-height: 418px;margin: 36px auto 0;}
+.mr-top{width: 1190px;height: 46px;}
+.mr-top a h3{width:260px;height:36px;background: url(../img/floor_all.png) no-repeat 0 -230px;margin-bottom: 10px;}
+.mr-store{width: 200px;height: 140px;margin-left: 15px;position: relative;border-top: 1px dashed #ccc;background: #f2f2f2;}
+.mr-store-lie{width: 160px;height: 116px;margin: 15px 20px 0;position: relative;overflow: hidden;}
+.mr-lie{width: 1020px;height: 116px;position: absolute;left: 0;overflow: visible;}
+.mr-content{width: 390px;height: 370px;border: 1px solid #ccc;position: relative;overflow: hidden;}
+.mr-list{width: 780px;height: 370px;overflow: hidden;position: absolute;}
+.mr-list li{float: left;}
+.mr-right{width: 552px;height: 372px;overflow: hidden;}
+.mr-goods{width: 560px;height: 380px;}
+/*运动户外*/
+.floor-yy{width: 1190px;min-height: 418px;margin: 36px auto 0;}
+.yy-top{width: 1190px;height: 46px;}
+.yy-top a h3{width:260px;height:36px;background: url(../img/floor_all.png) no-repeat 0 -276px;margin-bottom: 10px;}
+.yy-store{width: 200px;height: 140px;margin-left: 15px;position: relative;border-top: 1px dashed #ccc;background: #f2f2f2;}
+.yy-store-lie{width: 160px;height: 116px;margin: 15px 20px 0;position: relative;overflow: hidden;}
+.yy-lie{width: 1020px;height: 116px;position: absolute;left: 0;overflow: visible;}
+.yy-content{width: 390px;height: 370px;border: 1px solid #ccc;position: relative;overflow: hidden;}
+.yy-list{width: 780px;height: 370px;overflow: hidden;position: absolute;}
+.yy-list li{float: left;}
+.yy-list1{width:36px;height:13px;position: absolute;left: 182px;bottom: 16px;}
+.yy-list1 li{float: left;width: 13px;height: 13px;margin-right: 5px;border-radius: 50%;background: #666;}
+.yy-list1 li.active{background: #E5004F;}
+.yy-right{width: 552px;height: 372px;overflow: hidden;}
+.yy-goods{width: 560px;height: 380px;}
+/*内衣配饰*/
+.floor-ny{width: 1190px;min-height: 418px;margin: 36px auto 0;}
+.ny-top{width: 1190px;height: 46px;}
+.ny-top a h3{width:260px;height:36px;background: url(../img/floor_all.png) no-repeat 0 -322px;margin-bottom: 10px;}
+.ny-store{width: 200px;height: 140px;margin-left: 15px;position: relative;border-top: 1px dashed #ccc;background: #f2f2f2;}
+.ny-store-lie{width: 160px;height: 116px;margin: 15px 20px 0;position: relative;overflow: hidden;}
+.ny-lie{width: 1020px;height: 116px;position: absolute;left: 0;overflow: visible;}
+.ny-content{width: 390px;height: 370px;border: 1px solid #ccc;position: relative;overflow: hidden;}
+.ny-list{width: 780px;height: 370px;overflow: hidden;position: absolute;}
+.ny-list li{float: left;}
+.ny-right{width: 552px;height: 372px;overflow: hidden;}
+.ny-goods{width: 560px;height: 380px;}
+/*可爱婴童*/
+.floor-ka{width: 1190px;min-height: 418px;margin: 36px auto 0;}
+.ka-top{width: 1190px;height: 46px;}
+.ka-top a h3{width:260px;height:36px;background: url(../img/floor_all.png) no-repeat 0 -368px;margin-bottom: 10px;}
+.ka-store{width: 200px;height: 140px;margin-left: 15px;position: relative;border-top: 1px dashed #ccc;background: #f2f2f2;}
+.ka-store-lie{width: 160px;height: 116px;margin: 15px 20px 0;position: relative;overflow: hidden;}
+.ka-lie{width: 1020px;height: 116px;position: absolute;left: 0;overflow: visible;}
+.ka-content{width: 390px;height: 370px;border: 1px solid #ccc;position: relative;overflow: hidden;}
+.ka-list{width: 780px;height: 370px;overflow: hidden;position: absolute;}
+.ka-list li{float: left;}
+.ka-right{width: 552px;height: 372px;overflow: hidden;}
+.ka-goods{width: 560px;height: 380px;}
+/*银泰卡*/
+.ytk{width: 1190px;height: 169px;margin: 30px auto 0;border: 1px solid #ccc;}
+.tk1{width: 395px;height: 165px;float: left;overflow: hidden;}
+.tk1 a{display:block;width: 390px;height: 165px;margin: 0 2.5px;}
+.tk1 a.yt-z{border-left: 1px solid #ccc;border-right: 1px solid #ccc;}
+/*楼梯导航*/
+.louTi-nav{width: 50px;height: 545px;position: fixed;right: 0;bottom: 20px;display: none;}
+.louTi-nav a{display:block;width: 30px;height: 30px;padding: 5px 10px 15px;margin-bottom: 5px;}
+.louTi-nav a.louti-bg{background: #E5004F;color: #fff;}
+.louTi-nav a span{display: none;}
+.mp1{background:url(../img/floor_nav.png) no-repeat;}
+.nz1{background:url(../img/floor_nav.png) no-repeat 0 -55px;}
+.jp1{background:url(../img/floor_nav.png) no-repeat 0 -110px;}
+.xx1{background:url(../img/floor_nav.png) no-repeat 0 -165px;}
+.bag1{background:url(../img/floor_nav.png) no-repeat 0 -220px;}
+.mr1{background:url(../img/floor_nav.png) no-repeat 0 -275px;}
+.yy1{background:url(../img/floor_nav.png) no-repeat 0 -330px;}
+.ny1{background:url(../img/floor_nav.png) no-repeat 0 -385px;}
+.ka1{background:url(../img/floor_nav.png) no-repeat 0 -440px;}
+.fh1{background:url(../img/floor_nav.png) no-repeat 0 -495px;}
+
+
+
+
+
+
+

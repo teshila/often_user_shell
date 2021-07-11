@@ -1,0 +1,132 @@
+{
+	"status": 1,
+	"msg": "请求成功",
+	"data1": [ 				
+				{
+					"id": "a1",
+					"img": "img/m1-1.jpg",
+					"sign":"￥",
+					"price":"239",
+					"num":"698",
+					"name":"战地吉普 秋冬新款男士格子加绒保暖衬衫"
+				},
+				{
+					"id":"a2",
+					"img": "img/m1-2.jpg",
+					"sign":"￥",
+					"price":"229",
+					"num":"798",
+					"name":"恒源祥男士休闲纯棉长袖格子衬衫翻领衬衣 C338"
+				},
+				{
+					"id": "a3",
+					"img": "img/m1-3.jpg",
+					"sign":"￥",
+					"price":"229",
+					"num":"798",
+					"name":"恒源祥男士休闲纯棉长袖衬衫格子衬衣 C334"
+				},
+				{
+					"id": "a4",
+					"img": "img/m1-4.jpg",
+					"sign":"￥",
+					"price":"592",
+					"num":"1200",
+					"name":"【自营】HUGO BOSS雨果·博斯蓝灰色纯棉时尚男士长"
+				},
+				{
+					"id": "a4",
+					"img": "img/m1-5.jpg",
+					"sign":"￥",
+					"price":"288",
+					"num":"829",
+					"name":"华帝卡尼优质埃及长绒棉提花加厚经典格子长袖衬衫"
+				}								
+			],
+	"data2": [ 				
+				{
+					"id": "a1",
+					"img": "img/m2-1.jpg",
+					"sign":"￥",
+					"price":"1050",
+					"num":"1400",
+					"name":"【自营】VERSACE JEANS红色纯棉烫金印花男士长袖"
+				},
+				{
+					"id":"a2",
+					"img": "img/m2-2.jpg",
+					"sign":"￥",
+					"price":"800",
+					"num":"2000",
+					"name":"【自营】VERSACE JEANS黑色纯棉印花男士短袖T"
+				},
+				{
+					"id":"a2",
+					"img": "img/m2-2.jpg",
+					"sign":"￥",
+					"price":"800",
+					"num":"2000",
+					"name":"【自营】VERSACE JEANS黑色纯棉印花男士短袖T"
+				},
+				{
+					"id": "a4",
+					"img": "img/m2-4.jpg",
+					"sign":"￥",
+					"price":"3200",
+					"num":"7100",
+					"name":"【自营】VERSACE JEANS黑色尼龙材质拼皮装饰时尚男士棉服,C1GOB905,899,50"
+				},
+				{
+					"id":"a2",
+					"img": "img/m2-2.jpg",
+					"sign":"￥",
+					"price":"800",
+					"num":"2000",
+					"name":"【自营】VERSACE JEANS黑色纯棉印花男士短袖T"
+				}										
+			],
+	"data3": [ 				
+				{
+					"id": "a1",
+					"img": "img/m3-1.jpg",
+					"sign":"￥",
+					"price":"539",
+					"num":"1080",
+					"name":"YOUNGOR雅戈尔长袖衬衫-YLTP15050LBAF41-33"
+				},
+				{
+					"id":"a2",
+					"img": "img/m3-2.jpg",
+					"sign":"￥",
+					"price":"1294",
+					"num":"2268",
+					"name":"BALLY/巴利 BLYTHE TSP 40 M 皮带-095"
+				},
+				{
+					"id": "a3",
+					"img": "img/m3-3.jpg",
+					"sign":"￥",
+					"price":"1430",
+					"num":"2200",
+					"name":"【自营】Z ZEGNA多色 纯棉复古图案男士长袖衬"
+				},
+				{
+					"id": "a4",
+					"img": "img/m3-4.jpg",
+					"sign":"￥",
+					"price":"880",
+					"num":"4680",
+					"name":"Youngor/雅戈尔男装 秋冬 羽绒服 上品折扣"
+				},
+				{
+					"id": "a4",
+					"img": "img/m3-5.jpg",
+					"sign":"￥",
+					"price":"1380",
+					"num":"2100",
+					"name":"【自营】Z ZEGNA橙色纯棉小圆点男士长袖衬"
+				}								
+		]		
+
+
+}

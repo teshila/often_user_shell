@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/baseCss.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<style type="text/css">
+			.top {
+					background:#323232;
+				}
+			.top-con {
+				background:#323232;
+			}
+			.top-nav-img {
+				width:144px;
+				float:left;
+			}
+			.aimg {
+				float:left;
+			}
+			.diva {
+				width:144px;
+				height:70px;
+				float:right;
+			}
+			.top-right {
+				float:right;
+			}
+			/*核算价格*/
+			.con {
+				width:1000px;
+				height:1000px;
+				margin:0 auto;
+				background:#E5E5E5;
+			}
+			.loading {
+				width:1000px;
+				height:20px;
+				margin:0 auto;
+				padding-left:20px;
+				padding-top:30px;
+				padding-bottom:20px;
+			}
+			.table {
+				border:0;
+				width:1000px;
+				text-align:center;
+				height:500px;
+			}
+			.input_text {
+				width:30px;
+				text-align:center;
+			}
+			/*.tr1 {
+				height:80px;
+			}
+			*/
+			/*.tr2 {
+				height:80px;
+				background:#fff;
+			}
+			*/
+			.num {
+				font-size:20px;
+				color:red;
+			}
+			.right p {
+				text-align:right;
+				padding-right:20px;
+				padding:10px 0;
+			}
+			.buyagain {
+				float:left;
+				width:80px;
+				height:30px;
+				background:red;
+				color:#fff;
+				border-radius:5px;
+				line-height:30px;
+				text-align:center;
+			}
+			.account {
+				float:right;
+				width:80px;
+				height:30px;
+				background:red;
+				border-radius:5px;
+				font-size:13px;
+				color:#000000;
+				font-family:"微软雅黑";
+				line-height:30px;
+				text-align:center;
+				margin-top:10px;
+				color:#fff;
+			}
+			.btndown {
+				font-weight:700;
+				outline:none;
+			}
+			.btnup {
+				font-weight:700;
+				outline:none;
+			}
+			.input_text {
+				font-weight:700;
+				outline:none;
+			}
+			.all {
+				color:#000000;
+				font-weight:bold;
+			}
+			.table tr {
+				height:60px;
+				width:1000px;
+				min-height:80px;
+			}
+			.table tr td {
+				height:60px;
+				width:1000px;
+			}
+			/*动态的创建*/
+			.td2 {
+				width:248px;
+				height:50px;
+			}
+			.del {
+				cursor:pointer;
+				display:inline-block;
+				width:50px;
+				height:50px;
+				font-size:18px;
+				font-family:"微软雅黑";
+				text-align:center;
+				line-height:50px;
+				color:#000000;
+			}
+			.del:hover {
+				background:red;
+				color:#fff;
+			}
+			.tdimg {
+				width:50px;
+				height:50px;
+			}
+			.alldel {
+				cursor:pointer;
+				margin-left:20px;
+				float:left;
+				width:80px;
+				height:30px;
+				background:red;
+				color:#fff;
+				border-radius:5px;
+				line-height:30px;
+				text-align:center;
+			}
+			.allbuy {
+				font-size:30px;
+				color:red;
+				float:right;
+				padding-right:20px;
+			}
+
+		</style>
+		<script src="js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/detailed.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/clickCart.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+			<div class="top">
+				<div class="top-con">
+					<div class="top-nav-img"><img src="regImg/logo.png"/></div>  
+					<div class="diva">
+						<a href="#" class="aimg"><img src="regImg/搜狗截图20170110201815.png" style="display: inline-block;"/></a>
+					</div>	
+					<div class="top-right">
+						<a href="index-main.html">寺库首页</a>
+						<a href="#">收藏寺库</a>
+						<a href="#">寺库APP</a>
+					</div>
+			</div>
+		</div>
+		<div class="con">
+			<div class="loading">现在<a href="loading.html" class="cartreg" style="color: red;">登录</a>您购物车中的商品将被永久保存</div>
+			<table border="0" cellspacing="0" cellpadding="0" class="table">
+				
+				<tr class="tr2">
+					<td><input type="checkbox" name="" id="" /></td>
+					<td style="width: 248px;height: 50px;padding: 0 10px;">
+						<img src="../img/14092865.jpg" width="50" height="50" style="float: left;" />
+						<span class="spancon" style="float: left;">Burlee Ugg Since 1974雪地靴 38码</span><br>
+						<span class="spansign" style="float: left;">BLUXEMINISL-DEN</span>
+					</td>
+					<td>澳大利亚</td>
+					<td><i style="font-size: 18px;">¥</i><i class="price num"> 2005</i></td>
+					<td><button class="btndown">-</button><input type="text" name="" id="" value="1" class="input_text"/><button class="btnup">+</button></td>
+					<td><i style="font-size: 18px;">¥</i><i class="sam num"> 2005</i></td>
+					<td><a href="#" class="del">删除</a></td>
+				</tr>
+			</table>
+			<div>
+				<p style="height: 30px;padding-left: 20px;"><input type="checkbox" name="" id="" value="" />&nbsp;<i class="all">全选</i></p>
+				<div class="right clearfix">
+					<p>商品数量总计：<i class="allnum" style="font-size: 14px;color: red;">0</i>件</p>
+					<p>包装数量总计：<i>0</i>件</p>
+					<p>包装数量总计：<i>0.00</i></p>
+						<a href="loading.html" class="account">立即结算</a> <span class="allbuy"></span>
+					<a href="index-main.html" class="buyagain">继续购物</a><a class="alldel">删除未选中</a>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
