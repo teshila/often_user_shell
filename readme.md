@@ -1,2 +1,1 @@
-常用的脚本文件及对应的书签
-
+This is the often use linus shells and bookmarks;
