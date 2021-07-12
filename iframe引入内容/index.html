@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测度</title>
+<link href="css/animate.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<style>
+html {
+	/*将em,rem的字体重置为1.2em=12px,默认是1em或者rem=16px*/
+	font-size: 62.5%;
+}
+
+.Gzloading {
+	width: 150px;
+	height: 28px;
+	line-height: 28px;
+	background: #000;
+	color: #fff;
+	font-family: "微软雅黑";
+	font-size: 1.2rem;
+	padding: 2px 4px;
+	text-align: center;
+	position: absolute;
+	left: 450px;
+}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		(function($) {
+			
+			//插件使用方式1，非继承方式使用
+			/* $.fn.drag = function() {
+				Drag();
+			}
+			var temp = (function show() {
+				console.log(22);
+			})();
+
+			function Drag() {
+				temp;
+				console.log(1);
+			} */
+
+			
+			
+			
+			//插件采用继承方式使用的方法
+			/* $.fn.defaults = {
+				width : 36,
+				height : 36,
+				lineHeight : 36,
+				contents : "",
+				callback : function(ok) {
+					if (ok) {
+						//在此处写成功的方法
+					}
+				}
+			}
+			
+			$.fn.loading = function(option) {
+				if(option!=null||option!=undefined){
+					var opt = $.extend({}, $.fn.defaults);
+					console.log(1);
+				}
+			}
+			 */
+		})(jQuery);
+		
+		$("body").drag();
+	</script>
+</body>
+</html>

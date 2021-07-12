@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测度</title>
+<link href="css/animate.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<style>
+body{
+	border: 1px solid green;
+}
+</style>
+</head>
+<body>
+	<a href="javascript:void(0);" class="btns" data-src="res/a.html">aaa</a>
+	<a href="javascript:void(0);" class="btns" data-src="res/b.html">bbb</a>
+	<a href="javascript:void(0);" class="btns" data-src="res/c.html">ccc</a>
+
+	<iframe id="frametabcontent" src=""  scrolling="no" frameborder="0" style="height:100%;width:100%"></iframe>
+	
+	
+	<script type="text/javascript">
+		$(".btns").each(function(){
+			var $this = $(this);
+			$this.click(function(){
+				
+				
+				var hmain = document.getElementById("frametabcontent");
+				console.log(hmain);
+				var bheight = document.documentElement.clientHeight;
+				hmain .style.width = '100%';
+				//hmain .style.height = bheight + 'px';
+				
+				iFrameHeight();
+				var _this = $(this);
+				var src = _this.data("src");
+				$("#frametabcontent").attr("src",src);
+			});
+			
+		});
+	
+		
+		
+		function iFrameHeight() {
+			//http://zhidao.baidu.com/link?url=AV6iwSNVqNNNpFlslr19vHQ68RHVE-HFMueKhPNJ-RGg1e1D6WKScU6MHVVpIqJhyciNsrjCNhvSewTDHCFZKwgAjQxQc5yMehY5M8IxTwu
+			/* var ifm= document.getElementById("frametabcontent");
+			var subWeb = document.frames ? document.frames["frametabcontent"].document :ifm.contentDocument;
+			if(ifm != null && subWeb != null) {
+				ifm.height = subWeb.body.scrollHeight;
+			} */
+			
+			
+			
+			//http://abc08010051.iteye.com/blog/1840204
+		    win = frame.contentWindow, 
+		    doc = win.document, 
+		    html = doc.documentElement, 
+		    body = doc.body; 
+
+			// 获取高度 
+			var height = Math.max( body.scrollHeight, body.offsetHeight, 
+			                       html.clientHeight, html.scrollHeight, html.offsetHeight ); 
+	
+			frame.setAttribute('height', height);
+			}
+		
+		//http://www.tuicool.com/articles/eaaI7bu
+		//https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=js%20%E5%BE%97%E5%88%B0iframe%E9%AB%98%E5%BA%A6%20&oq=document.documentelement%20%E7%AA%97%E4%BD%93%E9%AB%98%E5%BA%A6&rsv_pq=a8e307500001b466&rsv_t=e2918Ki205duK0uOX%2BbAys3YfWC5DyxeR2JbVKoVLDDw8sYS%2F3ulYs1XyUc&rqlang=cn&rsv_enter=1&inputT=7580&rsv_sug3=24&rsv_sug1=9&rsv_sug7=100&rsv_sug2=0&rsv_sug4=7580
+	</script>
+</body>
+</html>
